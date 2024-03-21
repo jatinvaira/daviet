@@ -5,7 +5,7 @@ void main() {
 }
 
 class GeeksForGeeks extends StatelessWidget {
-  const GeeksForGeeks({Key? key}) : super(key: key);
+  const GeeksForGeeks({super.key});
 
   @override
   Widget build(BuildContext context) {
