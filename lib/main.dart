@@ -12,10 +12,10 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      themeMode: ThemeMode.system,
+    return MaterialApp(
       theme: TAppTheme.lightTheme,
       darkTheme: TAppTheme.darkTheme,
+      themeMode: ThemeMode.system,
     );
   }
 }
