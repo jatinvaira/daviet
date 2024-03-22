@@ -1,0 +1,17 @@
+flutter_native_splash:
+  color: "#fad0c4"
+  color_dark: "#272727"
+  image: assets/logos/DRONA.png
+  image_dark: assets/logos/DRONA.png
+
+  android_12:
+    color: "#fad0c4"
+    color_dark: "#272727"
+    image: assets/logos/DRONA.png
+    image_dark: assets/logos/DRONA.png
+
+  web: false
+
+
+
+# flutter pub run flutter_native_splash:create --path=splash.yaml

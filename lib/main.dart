@@ -8,7 +8,7 @@ void main() {
 
 
   // Todo: Add Widgets
-  // Todo: add local storage
+  // Todo: add local storage5
   // Todo: await native splash
   // Todo: init firebase
   // Todo: init auth
