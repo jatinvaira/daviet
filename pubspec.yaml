@@ -45,6 +45,8 @@ flutter:
   # Loal Assets
   assets:
     - assets/images/
+    - assets/logos/
+    - assets/images/on_boarding_images/
     - assets/icons/
     - assets/vectors/
     - assets/videos/
