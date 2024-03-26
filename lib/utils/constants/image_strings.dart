@@ -17,7 +17,11 @@ class DImages {
   static const String google = "assets/icons/google.png";
   static const String facebook= "assets/icons/facebook.png";
 
-
+  //verify email
+  static const String verifyEmail =
+      "assets/images/on_boarding_images/Onboarding1.gif";
+  static const String deliveredEmail =
+      "assets/images/on_boarding_images/Onboarding1.gif";
 }
 
 

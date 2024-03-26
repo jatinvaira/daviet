@@ -1,8 +1,6 @@
 import 'package:daviet/common/styles/spacing_styles.dart';
 import 'package:daviet/features/authentication/screens/login/widgets/login_form.dart';
 import 'package:daviet/features/authentication/screens/login/widgets/login_header.dart';
-import 'package:daviet/utils/constants/colors.dart';
-import 'package:daviet/utils/constants/image_strings.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

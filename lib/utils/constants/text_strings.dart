@@ -7,18 +7,18 @@ class TTexts {
   static const String skip = "Skip";
   static const String done = "Done";
   static const String submit = "Submit";
-  static const String appName = "T-Store";
+  static const String appName = "DAVIET";
   static const String tContinue = "Continue";
 
 
   // -- OnBoarding Texts
   static const String onBoardingTitle1 = "Hii Dear User";
-  static const String onBoardingTitle2 = "Select Payment Method";
-  static const String onBoardingTitle3 = "Deliver at your door step";
+  static const String onBoardingTitle2 = "Major Needs in your device";
+  static const String onBoardingTitle3 = "Seamless Interface";
 
   static const String onBoardingSubTitle1 = "Welcome to DAVIET Companion";
-  static const String onBoardingSubTitle2 = "For Seamless Transactions, Choose Your Payment Path - Your Convenience, Our Priority!";
-  static const String onBoardingSubTitle3 = "From Our Doorstep to Yours - Swift, Secure, and Contactless Delivery!";
+  static const String onBoardingSubTitle2 = "Give Feedback - Your Convenience, Our Priority!";
+  static const String onBoardingSubTitle3 = "From Payments to event notifications";
 
 
   // -- Authentication Forms
@@ -44,7 +44,7 @@ class TTexts {
 
 
   // -- Authentication Headings
-  static const String loginTitle = "Welcome back,";
+  static const String loginTitle = "Welcome to DAVIET Companion";
   static const String loginSubTitle = "Discover Limitless Choices and Unmatched Convenience.";
   static const String signupTitle = "Let’s create your account";
   static const String forgetPasswordTitle = "Forget password";
