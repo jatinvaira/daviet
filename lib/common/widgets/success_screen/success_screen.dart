@@ -1,7 +1,5 @@
 import 'package:daviet/common/styles/spacing_styles.dart';
-import 'package:daviet/features/authentication/screens/login/login.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 import '../../../utils/constants/sizes.dart';
 import '../../../utils/constants/text_strings.dart';

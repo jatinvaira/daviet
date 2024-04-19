@@ -1,4 +1,5 @@
 import 'package:daviet/features/authentication/screens/password_configuration/forget_password.dart';
+import 'package:daviet/navigation_menu.dart';
 import 'package:daviet/utils/constants/sizes.dart';
 import 'package:daviet/utils/constants/text_strings.dart';
 import 'package:flutter/material.dart';
@@ -46,7 +47,8 @@ class DLoginForm extends StatelessWidget {
                   ],
                 ),
                 TextButton(
-                    onPressed: () => Get.to(() => const ForgetPassword()), child: const Text(TTexts.forgetPassword)),
+                    onPressed: () => Get.to(() => const ForgetPassword()),
+                    child: const Text(TTexts.forgetPassword)),
               ],
             ),
             const SizedBox(height: TSizes.spaceBtwSections),
@@ -55,7 +57,8 @@ class DLoginForm extends StatelessWidget {
             SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
-                    onPressed: () {}, child: const Text(TTexts.signIn))),
+                    onPressed: () => Get.to(() => const NavigationMenu()),
+                    child: const Text(TTexts.signIn))),
             const SizedBox(height: TSizes.spaceBtwItems),
             // crete acc
             SizedBox(
