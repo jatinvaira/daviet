@@ -1,3 +1,4 @@
+import 'package:daviet/common/widgets/products/post_cards/post_card_vertical.dart';
 import 'package:daviet/features/shop/screens/home/widgets/home_appbar.dart';
 import 'package:daviet/features/shop/screens/home/widgets/home_categories.dart';
 import 'package:daviet/features/shop/screens/home/widgets/promo_slider.dart';
@@ -7,6 +8,7 @@ import 'package:flutter/material.dart';
 
 import '../../../../common/widgets/custom_shapes/containers/primary_header_container.dart';
 import '../../../../common/widgets/custom_shapes/containers/search_container.dart';
+import '../../../../common/widgets/layouts/grid_layout.dart';
 import '../../../../common/widgets/texts/section_heading.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -14,12 +16,12 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  const Scaffold(
+    return  Scaffold(
         body: SingleChildScrollView(
             child: Column(
       children: [
         // THomeAppBar(),
-        TPrimaryHeaderContainer(
+        const TPrimaryHeaderContainer(
           child: Column(
             children: [
               THomeAppBar(),
@@ -56,9 +58,27 @@ class HomeScreen extends StatelessWidget {
         ///
 
         Padding(
-          padding: EdgeInsets.all(TSizes.defaultSpace),
-          child: TPromoSlider(banners: [DImages.promoBanner1, DImages.promoBanner2, DImages.promoBanner3],),
-        )
+          padding: const EdgeInsets.all(TSizes.defaultSpace),
+          child: Column(
+            children: <Widget>[
+              const TPromoSlider(
+                banners: [
+                  DImages.promoBanner1,
+                  DImages.promoBanner2,
+                  DImages.promoBanner3
+                ],
+              ),
+              const SizedBox(
+                height: TSizes.spaceBtwSections,
+              ),
+              TGridLayout(
+                  itemCount: 5,
+                itemBuilder: (_, index) => const PostCardVertical(),
+
+              ),
+            ],
+          ),
+        ),
       ],
     )));
   }

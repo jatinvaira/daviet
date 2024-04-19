@@ -4,8 +4,7 @@ import 'package:daviet/features/authentication/screens/login/widgets/login_heade
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-// ignore: unused_import
-import 'package:iconsax/iconsax.dart';
+
 
 import '../../../../common/widgets/login_signup/form_divider.dart';
 import '../../../../common/widgets/login_signup/social_buttons.dart';
@@ -20,6 +19,7 @@ class LoginScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // ignore: unused_local_variable
     final dark = THelperFunctions.isDarkMode(context);
     return Scaffold(
       body: SingleChildScrollView(

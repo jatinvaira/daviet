@@ -15,6 +15,7 @@ class TSignupForm extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // ignore: unused_local_variable
     final dark = THelperFunctions.isDarkMode(context);
     return Form(
       child: Column(
