@@ -8,6 +8,9 @@ import 'package:daviet/features/authentication/screens/onboarding/widgets/onboar
 import 'package:daviet/features/authentication/screens/onboarding/widgets/onboarding_dot_navigation.dart';
 import 'package:get/get.dart';
 
+import '../../../../utils/constants/colors.dart';
+import '../../../../utils/helpers/helper_functions.dart';
+
 class OnboardingScreen extends StatelessWidget {
   const OnboardingScreen({super.key});
 
@@ -16,6 +19,7 @@ class OnboardingScreen extends StatelessWidget {
     final controller = Get.put(OnBoardingController());
 
     return Scaffold(
+        backgroundColor: THelperFunctions.isDarkMode(context)? TColors.black: TColors.white,
         body: Stack(
       children: [
         // Horizontal scrollable pages

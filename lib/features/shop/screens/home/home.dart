@@ -11,6 +11,7 @@ import '../../../../common/widgets/custom_shapes/containers/primary_header_conta
 import '../../../../common/widgets/custom_shapes/containers/search_container.dart';
 import '../../../../common/widgets/layouts/grid_layout.dart';
 import '../../../../common/widgets/texts/section_heading.dart';
+import '../../../../utils/helpers/helper_functions.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -18,7 +19,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
-        backgroundColor: TColors.dark,
+        backgroundColor: THelperFunctions.isDarkMode(context)? TColors.black: TColors.white,
         body: SingleChildScrollView(
             child: Column(
       children: [
@@ -46,9 +47,12 @@ class HomeScreen extends StatelessWidget {
                       textColor: Colors.white,
                     ),
                     SizedBox(
-                      height: TSizes.spaceBtwItems,
+                      height: TSizes.spaceBtwItems*1.5,
                     ),
                     THomeCategories(),
+                    SizedBox(
+                      height: TSizes.spaceBtwSections*1.5,
+                    ),
                   ],
                 ),
               )

@@ -8,12 +8,15 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../../../../utils/constants/colors.dart';
+
 class VerifyEmailScreen extends StatelessWidget {
   const VerifyEmailScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: THelperFunctions.isDarkMode(context)? TColors.black: TColors.white,
       appBar: AppBar(
         automaticallyImplyLeading: false,
         actions: [

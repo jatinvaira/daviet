@@ -1,5 +1,7 @@
+import 'package:daviet/features/personalization/screens/settings/settings.dart';
 import 'package:daviet/features/shop/screens/departments/departments.dart';
 import 'package:daviet/features/shop/screens/home/home.dart';
+import 'package:daviet/features/shop/screens/saved/saved.dart';
 import 'package:daviet/utils/constants/colors.dart';
 import 'package:daviet/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
@@ -44,7 +46,7 @@ class NavigationController extends GetxController {
   final screens = [
     const HomeScreen(),
     const Departments(),
-    Container(color: Colors.blue),
-    Container(color: Colors.amber)
+    const SavedScreen(),
+    const SettingScreen(),
   ];
 }
