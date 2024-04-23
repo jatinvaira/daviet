@@ -4,8 +4,8 @@ class TProductTitleText extends StatelessWidget {
   const TProductTitleText({
     super.key,
     required this.title,
-    required this.smallSize,
-    required this.maxLines,
+     this.smallSize = true,
+     this.maxLines = 2,
     this.textAlign,
   });
 

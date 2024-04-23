@@ -1,6 +1,7 @@
 import 'package:daviet/common/styles/spacing_styles.dart';
 import 'package:daviet/features/authentication/screens/login/widgets/login_form.dart';
 import 'package:daviet/features/authentication/screens/login/widgets/login_header.dart';
+import 'package:daviet/utils/constants/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -22,6 +23,7 @@ class LoginScreen extends StatelessWidget {
     // ignore: unused_local_variable
     final dark = THelperFunctions.isDarkMode(context);
     return Scaffold(
+      backgroundColor: dark?TColors.black:TColors.white,
       body: SingleChildScrollView(
           child: Padding(
         padding: TSpacingStyle.paddingWithAppBarHeight,

@@ -5,12 +5,16 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 
+import '../../../../utils/constants/colors.dart';
+import '../../../../utils/helpers/helper_functions.dart';
+
 class ForgetPassword extends StatelessWidget {
   const ForgetPassword({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: THelperFunctions.isDarkMode(context)? TColors.black: TColors.white,
       appBar: AppBar(),
       body:  Padding(padding: const EdgeInsets.all(TSizes.defaultSpace),
       child: Column(

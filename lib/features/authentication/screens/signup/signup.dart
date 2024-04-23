@@ -9,6 +9,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 
+import '../../../../utils/constants/colors.dart';
+
 class SignupScreen extends StatelessWidget {
   const SignupScreen({super.key});
 
@@ -18,6 +20,7 @@ class SignupScreen extends StatelessWidget {
     // ignore: unused_local_variable
     final dark = THelperFunctions.isDarkMode(context);
     return Scaffold(
+      backgroundColor: THelperFunctions.isDarkMode(context)? TColors.black: TColors.white,
       appBar: AppBar(),
       body: SingleChildScrollView(
         child: Padding(
