@@ -1,3 +1,4 @@
+import 'package:daviet/features/shop/screens/departments/departments.dart';
 import 'package:daviet/features/shop/screens/home/home.dart';
 import 'package:daviet/utils/constants/colors.dart';
 import 'package:daviet/utils/helpers/helper_functions.dart';
@@ -26,7 +27,7 @@ class NavigationMenu extends StatelessWidget {
 
           destinations: const [
             NavigationDestination(icon: Icon(Iconsax.home), label: 'Home'),
-            NavigationDestination(icon: Icon(Iconsax.shop), label: 'Events'),
+            NavigationDestination(icon: Icon(Iconsax.designtools), label: 'Departments'),
             NavigationDestination(
                 icon: Icon(Iconsax.heart), label: 'Notifications'),
             NavigationDestination(icon: Icon(Iconsax.user), label: 'Profile'),
@@ -42,7 +43,7 @@ class NavigationController extends GetxController {
   final Rx<int> selectedIndex = 0.obs;
   final screens = [
     const HomeScreen(),
-    Container(color: Colors.purple),
+    const Departments(),
     Container(color: Colors.blue),
     Container(color: Colors.amber)
   ];

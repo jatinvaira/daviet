@@ -1,6 +1,6 @@
-
 import 'package:daviet/common/widgets/custom_shapes/containers/rounded_container.dart';
 import 'package:daviet/common/widgets/images/t_rounded_image.dart';
+import 'package:daviet/common/widgets/texts/t_brand_title_with_verified_icon.dart';
 import 'package:daviet/utils/constants/colors.dart';
 import 'package:daviet/utils/constants/image_strings.dart';
 import 'package:daviet/utils/constants/sizes.dart';
@@ -12,6 +12,7 @@ import '../../../styles/shadows.dart';
 import '../../icons/t_circular_icon.dart';
 import '../../texts/product_p_text.dart';
 import '../../texts/product_title_text.dart';
+import '../../texts/t_brand_title_text.dart';
 
 class PostCardVertical extends StatelessWidget {
   const PostCardVertical({super.key});
@@ -20,7 +21,7 @@ class PostCardVertical extends StatelessWidget {
   Widget build(BuildContext context) {
     final dark = THelperFunctions.isDarkMode(context);
     return GestureDetector(
-      onTap: (){},
+      onTap: () {},
       child: Container(
         width: 180,
         padding: const EdgeInsets.all(1),
@@ -32,12 +33,16 @@ class PostCardVertical extends StatelessWidget {
         child: Column(
           children: [
             // thumbnail wishlist disc
+            const SizedBox(
+              height: TSizes.spaceBtwItems,
+            ),
             TRoundedContainer(
               height: 180,
               padding: const EdgeInsets.all(TSizes.sm),
               backgroundColor: dark ? TColors.dark : TColors.light,
               child: Stack(
                 children: [
+                  // Thumbnail image
                   const TRoundedImage(
                     imageUrl: DImages.logoLight,
                     applyImageRadius: true,
@@ -71,61 +76,53 @@ class PostCardVertical extends StatelessWidget {
             const SizedBox(
               height: TSizes.spaceBtwItems / 2,
             ),
-            Padding(
-              padding: const EdgeInsets.only(left: TSizes.sm),
+            const Padding(
+              padding: EdgeInsets.only(left: TSizes.sm),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const TProductTitleText(
+                  TProductTitleText(
                     title: 'Cse Department',
                     maxLines: 2,
                     smallSize: true,
                     textAlign: TextAlign.left,
                   ),
-                  const SizedBox(
+                  SizedBox(
                     height: TSizes.spaceBtwItems / 2,
                   ),
-                  Row(
-                    children: [
-                      Text(
-                        'DAVIET',
-                        overflow: TextOverflow.ellipsis,
-                        maxLines: 1,
-                        style: Theme.of(context).textTheme.labelMedium,
-                      ),
-                      const SizedBox(
-                        width: TSizes.xs,
-                      ),
-                      const Icon(
-                        Iconsax.verify5,
-                        color: TColors.primary,
-                        size: TSizes.iconXs,
-                      ),
-                    ],
-                  ),
-
-                  // Spacer(),
-                     Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      const TProductPText(price: '35.0', isLarge: false,),
-                      Container(
-                        decoration: const BoxDecoration(
-                          color: TColors.dark,
-                          borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(TSizes.cardRadiusMd),
-                            bottomRight: Radius.circular(TSizes.productImageRadius),
-                          ),
-                        ),
-                        child: const SizedBox(
-                            width: TSizes.iconLg*1.2,
-                            height: TSizes.iconLg*1.2,
-                            child: Center(child: Icon(Iconsax.add, color: TColors.white,))),
-                      ),
-                    ],
-                  )
+                  TBrandTitleWithVerifiedIcon(title: 'CSE'),
                 ],
               ),
+            ),
+            const Spacer(),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                const Padding(
+                  padding: EdgeInsets.only(left: TSizes.sm),
+                  child: TProductPText(
+                    price: '35.0',
+                    isLarge: false,
+                  ),
+                ),
+                Container(
+                  decoration: const BoxDecoration(
+                    color: TColors.dark,
+                    borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(TSizes.cardRadiusMd),
+                      bottomRight: Radius.circular(TSizes.productImageRadius),
+                    ),
+                  ),
+                  child: const SizedBox(
+                      width: TSizes.iconLg * 1.2,
+                      height: TSizes.iconLg * 1.2,
+                      child: Center(
+                          child: Icon(
+                        Iconsax.add,
+                        color: TColors.white,
+                      ))),
+                ),
+              ],
             )
           ],
         ),

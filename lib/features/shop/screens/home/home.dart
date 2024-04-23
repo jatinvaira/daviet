@@ -2,6 +2,7 @@ import 'package:daviet/common/widgets/products/post_cards/post_card_vertical.dar
 import 'package:daviet/features/shop/screens/home/widgets/home_appbar.dart';
 import 'package:daviet/features/shop/screens/home/widgets/home_categories.dart';
 import 'package:daviet/features/shop/screens/home/widgets/promo_slider.dart';
+import 'package:daviet/utils/constants/colors.dart';
 import 'package:daviet/utils/constants/image_strings.dart';
 import 'package:daviet/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
@@ -17,6 +18,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
+        backgroundColor: TColors.dark,
         body: SingleChildScrollView(
             child: Column(
       children: [
@@ -68,6 +70,11 @@ class HomeScreen extends StatelessWidget {
                   DImages.promoBanner3
                 ],
               ),
+              const SizedBox(
+                height: TSizes.spaceBtwSections,
+              ),
+
+              const TSectionHeading(title: 'Popular Posts', showActionButton: false,),
               const SizedBox(
                 height: TSizes.spaceBtwSections,
               ),
