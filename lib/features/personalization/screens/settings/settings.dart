@@ -2,6 +2,7 @@ import 'package:daviet/common/widgets/appbar/appbar.dart';
 import 'package:daviet/common/widgets/custom_shapes/containers/primary_header_container.dart';
 import 'package:daviet/common/widgets/list_tiles/settings_menu_tile.dart';
 import 'package:daviet/common/widgets/texts/section_heading.dart';
+import 'package:daviet/features/personalization/screens/address/address.dart';
 import 'package:daviet/utils/constants/colors.dart';
 import 'package:daviet/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
@@ -62,6 +63,11 @@ class SettingScreen extends StatelessWidget {
                     title: 'My Academics',
                     subTitle: 'Your academics in one section',
                     onTap: () {},
+                  ),TSettingsMenuTile(
+                    icon: Iconsax.safe_home,
+                    title: 'My Addresses',
+                    subTitle: 'Your addresses in one section',
+                    onTap: () => Get.to(() => const UserAddressScreen()),
                   ),
                   TSettingsMenuTile(
                     icon: Iconsax.document,

@@ -228,11 +228,11 @@ class DImages {
 
   // -- Product Reviews
   static const String userProfileImage1 =
-      "assets/images/reviews/review_profile_image_1.jpg";
+      "assets/images/reviews/review_profile_image_1.png";
   static const String userProfileImage2 =
-      "assets/images/reviews/review_profile_image_2.jpeg";
+      "assets/images/reviews/review_profile_image_2.png";
   static const String userProfileImage3 =
-      "assets/images/reviews/review_profile_image_3.jpeg";
+      "assets/images/reviews/review_profile_image_3.png";
 
   //Banners
   static const String promoBanner1 = "assets/images/banners/promo-banner-1.png";
