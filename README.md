@@ -1,3 +1,3 @@
 # daviet
 
-A new Flutter project.
+Minor Project DAVIET COMPANION
