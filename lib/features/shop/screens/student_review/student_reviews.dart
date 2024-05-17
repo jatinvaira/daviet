@@ -1,11 +1,8 @@
 import 'package:daviet/common/widgets/appbar/appbar.dart';
 import 'package:daviet/features/shop/screens/student_review/widgets/rating_progress_indicator.dart';
 import 'package:daviet/features/shop/screens/student_review/widgets/user_review_card.dart';
-import 'package:daviet/utils/constants/colors.dart';
 import 'package:daviet/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_rating_bar/flutter_rating_bar.dart';
-import 'package:iconsax/iconsax.dart';
 
 import '../../../../common/widgets/products/ratings/rating_indicator.dart';
 

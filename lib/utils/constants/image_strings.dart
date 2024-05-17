@@ -252,6 +252,7 @@ class DImages {
 
   // -- Payment Methods
   static const String applePay = "assets/icons/payment_methods/apple-pay.png";
+  // static const String paytm = "assets/icons/payment_methods/paytm.png";
   static const String googlePay = "assets/icons/payment_methods/google-pay.png";
   static const String creditCard =
       "assets/icons/payment_methods/credit-card.png";

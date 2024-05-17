@@ -4,7 +4,6 @@ import 'package:daviet/common/widgets/texts/product_title_text.dart';
 import 'package:daviet/common/widgets/texts/t_brand_title_with_verified_icon.dart';
 import 'package:daviet/utils/constants/enums.dart';
 import 'package:daviet/utils/constants/image_strings.dart';
-import 'package:daviet/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../common/widgets/custom_shapes/containers/rounded_container.dart';
@@ -16,7 +15,7 @@ class TPostMetaData extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final darkMode = THelperFunctions.isDarkMode(context);
+    // final darkMode = THelperFunctions.isDarkMode(context);
     return Padding(
       padding: const EdgeInsets.only(
           left: 0,
