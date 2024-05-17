@@ -3,6 +3,7 @@ import 'package:daviet/common/widgets/custom_shapes/containers/primary_header_co
 import 'package:daviet/common/widgets/list_tiles/settings_menu_tile.dart';
 import 'package:daviet/common/widgets/texts/section_heading.dart';
 import 'package:daviet/features/personalization/screens/address/address.dart';
+import 'package:daviet/features/shop/screens/payments/payments.dart';
 import 'package:daviet/utils/constants/colors.dart';
 import 'package:daviet/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
@@ -98,6 +99,12 @@ class SettingScreen extends StatelessWidget {
                     title: 'Advisor Appointment',
                     subTitle: 'Schedule appointments with your advisor',
                     onTap: () {},
+                  ),
+                  TSettingsMenuTile(
+                    icon: Iconsax.money,
+                    title: 'Fee Payments',
+                    subTitle: 'Check your previous payments',
+                    onTap: () => Get.to(()=> const PaymentsScreen()),
                   ),
                   const SizedBox(
                     height: TSizes.spaceBtwSections,
