@@ -3,11 +3,13 @@ import 'package:daviet/common/widgets/appbar/tabbar.dart';
 import 'package:daviet/common/widgets/custom_shapes/containers/search_container.dart';
 import 'package:daviet/common/widgets/layouts/grid_layout.dart';
 import 'package:daviet/common/widgets/texts/section_heading.dart';
+import 'package:daviet/features/shop/screens/brand/all_brands.dart';
 import 'package:daviet/features/shop/screens/departments/widgets/category_tab.dart';
 import 'package:daviet/utils/constants/colors.dart';
 import 'package:daviet/utils/constants/sizes.dart';
 import 'package:daviet/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import '../../../../common/widgets/depts/dept_card.dart';
 
@@ -66,7 +68,7 @@ class Departments extends StatelessWidget {
                           // Featured Departments
                           TSectionHeading(
                             title: 'Featured Departments',
-                            onPressed: () {},
+                            onPressed: () => Get.to(()=> const AllBrandsScreen()),
                           ),
                           const SizedBox(
                             height: TSizes.spaceBtwItems / 1.5,
