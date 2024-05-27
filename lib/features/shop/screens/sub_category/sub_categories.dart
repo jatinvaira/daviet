@@ -4,9 +4,7 @@ import 'package:daviet/common/widgets/products/post_cards/post_card_horizontal.d
 import 'package:daviet/common/widgets/texts/section_heading.dart';
 import 'package:daviet/utils/constants/image_strings.dart';
 import 'package:daviet/utils/constants/sizes.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class SubCategoriesScreen extends StatelessWidget {
   const SubCategoriesScreen({super.key});
