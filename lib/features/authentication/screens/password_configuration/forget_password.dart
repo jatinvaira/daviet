@@ -1,6 +1,8 @@
+import 'package:daviet/features/authentication/controllers/forget_password/forget_password_controller.dart';
 import 'package:daviet/features/authentication/screens/password_configuration/reset_password.dart';
 import 'package:daviet/utils/constants/sizes.dart';
 import 'package:daviet/utils/constants/text_strings.dart';
+import 'package:daviet/utils/validators/validation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
@@ -11,8 +13,11 @@ import '../../../../utils/helpers/helper_functions.dart';
 class ForgetPassword extends StatelessWidget {
   const ForgetPassword({super.key});
 
+
+
   @override
   Widget build(BuildContext context) {
+    final controller = Get.put(ForgetPasswordController());
     return Scaffold(
       backgroundColor: THelperFunctions.isDarkMode(context)? TColors.black: TColors.white,
       appBar: AppBar(),
@@ -29,9 +34,14 @@ class ForgetPassword extends StatelessWidget {
 
 
           // text field
-          TextFormField(
-            decoration: const InputDecoration(
-              labelText: TTexts.email, prefixIcon: Icon(Iconsax.direct_right),
+          Form(
+            key: controller.forgetPasswordFormKey,
+            child: TextFormField(
+              controller: controller.email,
+              validator: TValidator.validateEmail,
+              decoration: const InputDecoration(
+                labelText: TTexts.email, prefixIcon: Icon(Iconsax.direct_right),
+              ),
             ),
           ),
           const SizedBox(height: TSizes.spaceBtwItems*2),
@@ -39,7 +49,7 @@ class ForgetPassword extends StatelessWidget {
           // submit
           SizedBox(
             width: double.infinity,
-              child: ElevatedButton(onPressed: () => Get.off(() => const ResetPassword()), child: const Text(TTexts.submit)),
+              child: ElevatedButton(onPressed: () => controller.sendPasswordResetEmail() , child: const Text(TTexts.submit)),
           )
 
 

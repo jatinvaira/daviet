@@ -1,9 +1,12 @@
+import 'package:daviet/features/personalization/controllers/user_controller.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get_state_manager/src/rx_flutter/rx_obx_widget.dart';
 import 'package:iconsax/iconsax.dart';
 
 import '../../../utils/constants/colors.dart';
 import '../../../utils/constants/image_strings.dart';
 import '../images/t_circular_image.dart';
+import '../shimmers/shimmer.dart';
 
 class TUserProfileTile extends StatelessWidget {
   const TUserProfileTile({
@@ -14,23 +17,36 @@ class TUserProfileTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final controller = UserController.instance;
     return ListTile(
-      leading: const TCircularImage(
-        image: DImages.user,
-        isNetworkImage: false,
-        width: 50,
-        height: 50,
-        padding: 0,
-      ),
+      leading:  Obx(() {
+        final networkImage = controller.user.value.profilePicture;
+        final image =
+        networkImage.isNotEmpty ? networkImage : DImages.user;
+
+        return controller.imageUploading.value
+            ? const TShimmerEffect(
+          width: 50,
+          height: 50,
+          // radius: 80,
+        )
+            : TCircularImage(
+          isNetworkImage: true,
+          image: image,
+          width: 50,
+          height: 50,
+          padding: 0,
+        );
+      }),
       title: Text(
-        'Jatin Vaira',
+        controller.user.value.fullName,
         style: Theme.of(context)
             .textTheme
             .headlineSmall!
             .apply(color: TColors.white),
       ),
       subtitle: Text(
-        'jatinvaira@gmail.com',
+        controller.user.value.email,
         style:
             Theme.of(context).textTheme.bodyMedium!.apply(color: TColors.white),
       ),

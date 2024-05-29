@@ -1,6 +1,5 @@
 import 'package:daviet/features/authentication/controllers/login/login_controller.dart';
 import 'package:daviet/features/authentication/screens/password_configuration/forget_password.dart';
-import 'package:daviet/navigation_menu.dart';
 import 'package:daviet/utils/constants/sizes.dart';
 import 'package:daviet/utils/constants/text_strings.dart';
 import 'package:daviet/utils/validators/validation.dart';
