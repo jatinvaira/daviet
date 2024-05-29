@@ -8,7 +8,6 @@ import 'package:daviet/utils/constants/image_strings.dart';
 import 'package:daviet/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
 import '../../../../common/widgets/custom_shapes/containers/primary_header_container.dart';
 import '../../../../common/widgets/custom_shapes/containers/search_container.dart';
 import '../../../../common/widgets/layouts/grid_layout.dart';
@@ -27,7 +26,7 @@ class HomeScreen extends StatelessWidget {
         body: SingleChildScrollView(
             child: Column(
           children: [
-            // THomeAppBar(),
+            // const THomeAppBar(),
             TPrimaryHeaderContainer(
               child: Column(
                 children: [
@@ -72,13 +71,7 @@ class HomeScreen extends StatelessWidget {
               padding: const EdgeInsets.all(TSizes.defaultSpace),
               child: Column(
                 children: <Widget>[
-                  const TPromoSlider(
-                    banners: [
-                      DImages.promoBanner1,
-                      DImages.promoBanner2,
-                      DImages.promoBanner3
-                    ],
-                  ),
+                  const TPromoSlider(),
                   const SizedBox(
                     height: TSizes.spaceBtwSections,
                   ),

@@ -1,7 +1,5 @@
-import 'package:daviet/common/widgets/success_screen/success_screen.dart';
 import 'package:daviet/data/repositories/authentication/authentication_repository.dart';
 import 'package:daviet/features/authentication/controllers/signup/verify_email_controller.dart';
-import 'package:daviet/features/authentication/screens/login/login.dart';
 import 'package:daviet/utils/constants/image_strings.dart';
 import 'package:daviet/utils/constants/sizes.dart';
 import 'package:daviet/utils/constants/text_strings.dart';

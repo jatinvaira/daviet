@@ -1,33 +1,24 @@
-import 'package:daviet/bindings/genral_bindings.dart';
-import 'package:daviet/data/repositories/authentication/authentication_repository.dart';
-import 'package:daviet/features/authentication/screens/login/login.dart';
+import 'package:daviet/bindings/general_bindings.dart';
+import 'package:daviet/routes/app_routes.dart';
 import 'package:daviet/utils/constants/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:daviet/utils/theme/theme.dart';
 import 'package:get/get.dart';
-import 'package:get/get_navigation/src/root/get_material_app.dart';
-import 'package:get_storage/get_storage.dart';
 
 class App extends StatelessWidget {
   const App({super.key});
 
   @override
   Widget build(BuildContext context) {
-    Get.testMode = true;
-    final deviceStorage = GetStorage();
+    // Get.testMode = true;
     return GetMaterialApp(
         debugShowCheckedModeBanner: false,
         themeMode: ThemeMode.system,
         theme: TAppTheme.lightTheme,
         darkTheme: TAppTheme.darkTheme,
         initialBinding: GeneralBindings(),
-        home:
-
-
-        // const LoginScreen()
-        // const OnboardingScreen()
-
-        const Scaffold(
+        getPages: AppRoutes.pages,
+        home: const Scaffold(
           backgroundColor: TColors.primary,
           body: Center(
             child: CircularProgressIndicator(
