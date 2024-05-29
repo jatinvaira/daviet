@@ -21,8 +21,8 @@ class THomeCategories extends StatelessWidget {
         scrollDirection: Axis.horizontal,
         itemBuilder: (_, index) {
           return TVerticalImageText(
-            image: DImages.logoLight,
-            title: 'Products',
+            image: DImages.logoDark,
+            title: 'DisplayItem ',
             onTap: () => Get.to(()=> const SubCategoriesScreen()),
           );
         },

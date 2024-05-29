@@ -1,6 +1,7 @@
 import 'package:daviet/common/widgets/appbar/appbar.dart';
 import 'package:daviet/features/shop/screens/student_review/widgets/rating_progress_indicator.dart';
 import 'package:daviet/features/shop/screens/student_review/widgets/user_review_card.dart';
+import 'package:daviet/utils/constants/colors.dart';
 import 'package:daviet/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
 
@@ -12,6 +13,7 @@ class StudentReviewScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
+      backgroundColor: TColors.dark,
       appBar: const TAppBar(
         title: Text('Student Reviews'),
         showBackArrow: true,

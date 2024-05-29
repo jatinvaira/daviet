@@ -21,7 +21,7 @@ class PostDetail extends StatelessWidget {
   Widget build(BuildContext context) {
     final dark = THelperFunctions.isDarkMode(context);
     return Scaffold(
-      bottomNavigationBar: const TBottomAddToCart(),
+      // bottomNavigationBar: const TBottomAddToCart(),
       backgroundColor: dark ? TColors.dark : TColors.light,
       body: SingleChildScrollView(
         child: Column(
@@ -37,14 +37,14 @@ class PostDetail extends StatelessWidget {
                 children: [
                   const TRatingAndShare(),
                   const TPostMetaData(),
-                  const TPostAttributes(),
-                  const SizedBox(
-                    height: TSizes.spaceBtwSections,
-                  ),
+                  // const TPostAttributes(),
+                  // const SizedBox(
+                  //   height: TSizes.spaceBtwSections,
+                  // ),
                   SizedBox(
                       width: double.infinity,
                       child: ElevatedButton(
-                          onPressed: () {}, child: const Text('Checkout'))),
+                          onPressed: () {}, child: const Text('Download button (if needed)'))),
                   const SizedBox(
                     height: TSizes.spaceBtwSections,
                   ),

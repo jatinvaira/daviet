@@ -50,7 +50,7 @@ class TPostCardHorizontal extends StatelessWidget {
                     backgroundColor: TColors.secondary.withOpacity(0.8),
                     padding: const EdgeInsets.symmetric(
                         horizontal: TSizes.sm, vertical: TSizes.xs),
-                    child: Text('CSE',
+                    child: Text('Dept.',
                         style: Theme.of(context)
                             .textTheme
                             .labelLarge!
@@ -94,7 +94,7 @@ class TPostCardHorizontal extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      const Flexible(child: TProductPText(price: '\$12.01', isLarge: false)),
+                      const Flexible(child: TProductPText(price: 'Author', isLarge: false)),
                       Container(
                         decoration: const BoxDecoration(
                           color: TColors.dark,
@@ -109,9 +109,10 @@ class TPostCardHorizontal extends StatelessWidget {
                             height: TSizes.iconLg * 1.2,
                             child: Center(
                                 child: Icon(
-                              Iconsax.document_15,
+                              Iconsax.document_cloud,
                               color: TColors.white,
-                            ))),
+                            ))
+                        ),
                       ),
                     ],
                   )

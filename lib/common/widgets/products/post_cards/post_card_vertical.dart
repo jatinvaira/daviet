@@ -108,7 +108,7 @@ class PostCardVertical extends StatelessWidget {
                 ),
                 Container(
                   decoration: const BoxDecoration(
-                    color: TColors.dark,
+                    // color: TColors.dark,
                     borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(TSizes.cardRadiusMd),
                       bottomRight: Radius.circular(TSizes.productImageRadius),

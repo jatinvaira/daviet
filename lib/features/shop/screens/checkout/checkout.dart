@@ -25,7 +25,7 @@ class CheckoutScreen extends StatelessWidget {
       appBar: TAppBar(
         showBackArrow: true,
         title: Text(
-          'Order Review',
+          'Payment Review',
           style: Theme.of(context).textTheme.headlineSmall,
         ),
       ),
@@ -85,11 +85,11 @@ class CheckoutScreen extends StatelessWidget {
           onPressed: () => Get.to(() => SuccessScreen(
               image: DImages.successfulPaymentIcon,
               title: 'Payment Success!',
-              subTitle: 'Item will be shipped soon',
+              subTitle: 'Fee details will be reflected to your portal soon.',
               onPressed: () => Get.offAll(() => const NavigationMenu())
           )
           ),
-          child: const Text('Checkout \$256.0'),
+          child: const Text('Redirect to Payment'),
         ),
       ),
     );
