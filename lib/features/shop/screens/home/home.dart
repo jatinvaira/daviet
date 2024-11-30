@@ -29,35 +29,35 @@ class HomeScreen extends StatelessWidget {
         body: SingleChildScrollView(
             child: Column(
           children: [
-            // THomeAppBar(),
+            // const THomeAppBar(),
             TPrimaryHeaderContainer(
               child: Column(
                 children: [
-                  THomeAppBar(),
-                  SizedBox(
+                  const THomeAppBar(),
+                  const SizedBox(
                     height: TSizes.spaceBtwSections,
                   ),
-                  TSearchContainer(
+                  const TSearchContainer(
                     text: 'Search in the app',
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: TSizes.spaceBtwSections,
                   ),
                   Padding(
-                    padding: EdgeInsets.only(left: TSizes.defaultSpace),
+                    padding: const EdgeInsets.only(left: TSizes.defaultSpace),
                     child: Column(
                       children: [
                         TSectionHeading(
-                          title: "Popular Picks",
-                          showActionButton: false,
-                          // onPressed: () => Get.to(() => const AllPosts()),
+                          title: "Popular Posts",
+                          showActionButton: true,
+                          onPressed: () => Get.to(() => const AllPosts()),
                           textColor: Colors.white,
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: TSizes.spaceBtwItems * 1.5,
                         ),
-                        THomeCategories(),
-                        SizedBox(
+                        const THomeCategories(),
+                        const SizedBox(
                           height: TSizes.spaceBtwSections * 1.5,
                         ),
                       ],
@@ -79,7 +79,7 @@ class HomeScreen extends StatelessWidget {
                     height: TSizes.spaceBtwSections,
                   ),
                   TSectionHeading(
-                    title: 'New Posts',
+                    title: 'Popular Posts',
                     showActionButton: true,
                     onPressed: () => Get.to(() => const AllPosts()),
                   ),

@@ -17,7 +17,7 @@ class CartScreen extends StatelessWidget {
       backgroundColor: THelperFunctions.isDarkMode(context)? TColors.dark: TColors.light,
       appBar: TAppBar(
         title: Text(
-          'Fee Payment',
+          'Cart',
           style: Theme.of(context).textTheme.headlineSmall,
         ),
       ),
@@ -29,7 +29,7 @@ class CartScreen extends StatelessWidget {
         padding: const EdgeInsets.all(TSizes.defaultSpace),
         child: ElevatedButton(
           onPressed: () => Get.to(() => const CheckoutScreen()),
-          child: const Text('Pay Sem 6 fee'),
+          child: const Text('Checkout \$256.0'),
         ),
       ),
     );

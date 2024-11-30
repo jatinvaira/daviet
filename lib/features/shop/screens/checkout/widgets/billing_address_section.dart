@@ -12,7 +12,7 @@ class TBillingAddressSection extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         TSectionHeading(
-          title: 'Student Details',
+          title: 'Shipping Address',
           buttonTitle: 'Change',
           showActionButton: false,
           onPressed: () {},
@@ -56,7 +56,7 @@ class TBillingAddressSection extends StatelessWidget {
             ),
             Expanded(
                 child: Text(
-              'B.tech CSE (123/21)',
+              'daviet, kabir nagar, jalandhar 144001',
               style: Theme.of(context).textTheme.bodyMedium,
               softWrap: true,
             )),

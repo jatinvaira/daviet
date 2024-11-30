@@ -1,5 +1,4 @@
 import 'package:daviet/common/widgets/appbar/appbar.dart';
-import 'package:daviet/utils/constants/colors.dart';
 import 'package:daviet/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
 
@@ -11,7 +10,6 @@ class AllPosts extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      backgroundColor: TColors.dark,
       appBar: TAppBar(
         title: Text('Popular Posts'),
         showBackArrow: true,

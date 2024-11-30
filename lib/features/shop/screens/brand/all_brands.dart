@@ -14,7 +14,7 @@ class AllBrandsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: const TAppBar(
-        title: Text('Departments'),
+        title: Text('Brand'),
         showBackArrow: true,
       ),
       body: SingleChildScrollView(
@@ -23,7 +23,7 @@ class AllBrandsScreen extends StatelessWidget {
           child: Column(
             children: [
               ///Heading
-              // const TSectionHeading(title: 'Departments', showActionButton: false,),
+              const TSectionHeading(title: 'Brands'),
               const SizedBox(
                 height: TSizes.spaceBtwItems,
               ),

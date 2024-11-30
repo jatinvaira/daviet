@@ -50,7 +50,7 @@ class TBrandCard extends StatelessWidget {
                     brandTextSizes: TextSizes.large,
                   ),
                   Text(
-                    '25 Posts',
+                    '250 Posts',
                     overflow: TextOverflow.ellipsis,
                     style: Theme.of(context).textTheme.labelMedium,
                   )

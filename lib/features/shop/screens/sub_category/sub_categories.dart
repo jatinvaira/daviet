@@ -2,7 +2,6 @@ import 'package:daviet/common/widgets/appbar/appbar.dart';
 import 'package:daviet/common/widgets/images/t_rounded_image.dart';
 import 'package:daviet/common/widgets/products/product_cards/product_card_vertical.dart';
 import 'package:daviet/common/widgets/texts/section_heading.dart';
-import 'package:daviet/utils/constants/colors.dart';
 import 'package:daviet/utils/constants/image_strings.dart';
 import 'package:daviet/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
@@ -15,7 +14,6 @@ class SubCategoriesScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: TColors.dark,
       appBar: const TAppBar(
         showBackArrow: true,
         title: Text('Clubs of Daviet'),
@@ -38,11 +36,10 @@ class SubCategoriesScreen extends StatelessWidget {
                 children: [
                   TSectionHeading(
                     title: 'ClickEr.',
-                    showActionButton: false,
                     onPressed: () {},
                   ),
                   const SizedBox(
-                    height: TSizes.spaceBtwItems ,
+                    height: TSizes.spaceBtwItems / 2,
                   ),
                   SizedBox(
                     height: 120,
