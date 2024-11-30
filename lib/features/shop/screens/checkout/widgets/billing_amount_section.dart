@@ -11,8 +11,8 @@ class TBillingAmountSection extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Text('Subtotal', style: Theme.of(context).textTheme.bodyMedium,),
-            Text('\$256.00', style: Theme.of(context).textTheme.bodyMedium,),
+            Text('Tuition Fee', style: Theme.of(context).textTheme.bodyMedium,),
+            Text('40,000', style: Theme.of(context).textTheme.bodyMedium,),
           ],
         ),
         const SizedBox(height: TSizes.spaceBtwItems/2,),
@@ -21,8 +21,8 @@ class TBillingAmountSection extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Text('Shipping Fee', style: Theme.of(context).textTheme.bodyMedium,),
-            Text('\$6.00', style: Theme.of(context).textTheme.labelLarge,),
+            Text('Facility fee', style: Theme.of(context).textTheme.bodyMedium,),
+            Text('5,000', style: Theme.of(context).textTheme.labelLarge,),
           ],
         ),
         const SizedBox(height: TSizes.spaceBtwItems/2,),
@@ -30,8 +30,8 @@ class TBillingAmountSection extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Text('Tax Fee', style: Theme.of(context).textTheme.bodyMedium,),
-            Text('\$6.00', style: Theme.of(context).textTheme.labelLarge,),
+            Text('other charges', style: Theme.of(context).textTheme.bodyMedium,),
+            Text('5,000', style: Theme.of(context).textTheme.labelLarge,),
           ],
         ),
         const SizedBox(height: TSizes.spaceBtwItems/2,),
@@ -40,8 +40,8 @@ class TBillingAmountSection extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Text('Shipping Fee', style: Theme.of(context).textTheme.bodyMedium,),
-            Text('\$6.00', style: Theme.of(context).textTheme.titleMedium,),
+            Text('Total', style: Theme.of(context).textTheme.bodyMedium,),
+            Text('Rs. 50,000', style: Theme.of(context).textTheme.titleMedium,),
           ],
         ),
         const SizedBox(height: TSizes.spaceBtwItems/2,),

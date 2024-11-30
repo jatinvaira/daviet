@@ -15,7 +15,7 @@ class TCartItems extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView.separated(
       shrinkWrap: true,
-      itemCount: 2,
+      itemCount: 1,
       separatorBuilder: (_, __) =>
       const SizedBox(height: TSizes.spaceBtwSections),
       itemBuilder: (_, index) =>  Column(
@@ -26,7 +26,7 @@ class TCartItems extends StatelessWidget {
           ),
           if (showAddRemoveButtons)
             const Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            mainAxisAlignment: MainAxisAlignment.start,
             children: [
               Row(
                 children: [
@@ -35,10 +35,10 @@ class TCartItems extends StatelessWidget {
                   ),
                   // add and remove button
 
-                  TProductQuantityWithAddRemoveButton(),
+                  // TProductQuantityWithAddRemoveButton(),
                 ],
               ),
-              TProductPText(price: '\$256', isLarge: false)
+              TProductPText(price: 'Rs. 50,000/-', isLarge: false)
             ],
           )
         ],

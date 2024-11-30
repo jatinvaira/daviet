@@ -26,7 +26,7 @@ class TCouponCode extends StatelessWidget {
           Flexible(
             child: TextFormField(
               decoration: const InputDecoration(
-                hintText: 'Have a promo code? Enter here',
+                hintText: 'Have Scholarship? Enter Code here.',
                 focusedBorder: InputBorder.none,
                 enabledBorder: InputBorder.none,
                 errorBorder: InputBorder.none,

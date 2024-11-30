@@ -37,24 +37,24 @@ class TCartItem extends StatelessWidget {
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const TBrandTitleWithVerifiedIcon(title: 'Cse'),
+              const TBrandTitleWithVerifiedIcon(title: 'DAVIET'),
               const TProductTitleText(
-                title: 'CSE department ',
+                title: 'Jatin Vaira',
                 maxLines: 1,
               ),
               // attributes
               Text.rich(TextSpan(children: [
                 TextSpan(
-                    text: 'Color ',
+                    text: 'Semester ',
                     style: Theme.of(context).textTheme.bodySmall),
                 TextSpan(
-                    text: 'Green ',
+                    text: '6 ',
                     style: Theme.of(context).textTheme.bodyLarge),
                 TextSpan(
-                    text: 'Size ',
+                    text: 'Roll. No. ',
                     style: Theme.of(context).textTheme.bodySmall),
                 TextSpan(
-                    text: 'UK 08 ',
+                    text: '123/21 ',
                     style: Theme.of(context).textTheme.bodyLarge),
               ]))
             ],

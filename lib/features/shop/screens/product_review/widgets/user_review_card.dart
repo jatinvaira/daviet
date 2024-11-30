@@ -30,7 +30,7 @@ class UserReviewCard extends StatelessWidget {
                   width: TSizes.spaceBtwItems,
                 ),
                 Text(
-                  'John Doe',
+                  'Demo Review',
                   style: Theme.of(context).textTheme.titleLarge,
                 )
               ],
@@ -85,7 +85,7 @@ class UserReviewCard extends StatelessWidget {
                   ,
                   children: [
                     Text(
-                      'Jatin Vaira',
+                      'Admin',
                       style: Theme.of(context).textTheme.titleMedium,
                     ),
                     Text(

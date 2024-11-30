@@ -4,9 +4,6 @@ import 'package:daviet/features/authentication/modals/user_model.dart';
 import 'package:daviet/utils/constants/sizes.dart';
 import 'package:daviet/utils/popups/loaders.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/foundation.dart';
-import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
 
@@ -21,37 +18,6 @@ class UserController extends GetxController {
   final profileLoading = false.obs;
   Rx<UserModel> user = UserModel.empty().obs;
   final userRepository = Get.put(UserRepository());
-
-  final hidePassword = false.obs;
-  final imageUploading = false.obs;
-  final verifyEmail = TextEditingController();
-  final verifyPassword = TextEditingController();
-  GlobalKey<FormState> reAuthFormKey = GlobalKey<FormState>();
-
-  @override
-  void onInit() {
-    super.onInit();
-    fetchUserRecord();
-  }
-
-  Future<void> fetchUserRecord() async {
-    try {
-      profileLoading.value = true;
-      final user = await userRepository.fetchUserDetails();
-      this.user(user);
-      profileLoading.value = false;
-    } catch (e, stackTrace) {
-      if (kDebugMode) {
-        print('Error in fetchUserRecord: $e');
-      }
-      if (kDebugMode) {
-        print('StackTrace: $stackTrace');
-      }
-      user(UserModel.empty());
-    } finally {
-      profileLoading.value = false;
-    }
-  }
 
   // save user record from any reg provider
   Future<void> saveUserRecord(UserCredential? userCredentials) async {

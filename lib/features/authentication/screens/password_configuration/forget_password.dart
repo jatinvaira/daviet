@@ -1,4 +1,4 @@
-import 'package:daviet/features/authentication/controllers/forget_password/forget_password_controller.dart';
+import 'package:daviet/features/authentication/screens/password_configuration/reset_password.dart';
 import 'package:daviet/utils/constants/sizes.dart';
 import 'package:daviet/utils/constants/text_strings.dart';
 import 'package:daviet/utils/validators/validation.dart';
