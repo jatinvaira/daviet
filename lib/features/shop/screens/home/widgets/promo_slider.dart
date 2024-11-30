@@ -1,7 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:daviet/common/widgets/shimmers/shimmer.dart';
 import 'package:daviet/features/shop/controllers/banner_controller.dart';
-import 'package:daviet/features/shop/controllers/home_controller.dart';
 import 'package:daviet/utils/constants/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';

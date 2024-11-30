@@ -1,7 +1,7 @@
-import 'package:daviet/features/shop/screens/departments/departments.dart';
 import 'package:daviet/features/shop/screens/payments/payments.dart';
+import 'package:daviet/features/shop/screens/product_review/product_reviews.dart';
+import 'package:daviet/features/shop/screens/products/products.dart';
 import 'package:daviet/features/shop/screens/saved/saved.dart';
-import 'package:daviet/features/shop/screens/student_review/student_reviews.dart';
 import 'package:daviet/routes/routes.dart';
 import 'package:get/get_navigation/src/routes/get_route.dart';
 
@@ -20,10 +20,10 @@ import '../features/shop/screens/home/home.dart';
 class AppRoutes {
 static final pages = [
 GetPage(name: TRoutes.home, page: () => const HomeScreen()),
-GetPage(name: TRoutes.department, page: () => const Departments()),
+GetPage(name: TRoutes.department, page: () => const Products()),
 GetPage(name: TRoutes.favourites, page: () => const SavedScreen()),
 GetPage(name: TRoutes.settings, page: () => const SettingScreen()),
-GetPage(name: TRoutes.productReviews, page: () => const StudentReviewScreen()),
+GetPage(name: TRoutes.productReviews, page: () => const ProductReviewScreen()),
 GetPage(name: TRoutes.order, page: () => const PaymentsScreen()),
 GetPage(name: TRoutes.checkout, page: () => const CheckoutScreen()),
 GetPage(name: TRoutes.cart, page: () => const CartScreen()),

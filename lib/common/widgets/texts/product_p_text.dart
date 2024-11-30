@@ -6,7 +6,7 @@ class TProductPText extends StatelessWidget {
     this.currencySign = '\$',
     required this.price,
     this.maxLines = 1,
-    required this.isLarge,
+    this.isLarge = false,
     this.lineThrough = false,
   });
 
@@ -18,8 +18,7 @@ class TProductPText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Text(
-      // currencySign +
-          price,
+      "\$$price",
       maxLines: maxLines,
       overflow: TextOverflow.ellipsis,
       style: isLarge

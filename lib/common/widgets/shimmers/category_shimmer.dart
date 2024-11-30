@@ -36,6 +36,6 @@ class TCategoryShimmer extends StatelessWidget {
             );
           }),
     );
-    return const Placeholder();
+    // return const Placeholder();
   }
 }

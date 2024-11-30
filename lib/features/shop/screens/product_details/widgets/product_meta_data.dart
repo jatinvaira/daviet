@@ -10,8 +10,8 @@ import '../../../../../common/widgets/custom_shapes/containers/rounded_container
 import '../../../../../utils/constants/colors.dart';
 import '../../../../../utils/constants/sizes.dart';
 
-class TPostMetaData extends StatelessWidget {
-  const TPostMetaData({super.key});
+class TProductsMetaData extends StatelessWidget {
+  const TProductsMetaData({super.key});
 
   @override
   Widget build(BuildContext context) {

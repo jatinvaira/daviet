@@ -1,28 +1,38 @@
 import 'package:daviet/common/widgets/custom_shapes/containers/rounded_container.dart';
 import 'package:daviet/common/widgets/images/t_rounded_image.dart';
 import 'package:daviet/common/widgets/texts/t_brand_title_with_verified_icon.dart';
+import 'package:daviet/features/shop/controllers/product_controller.dart';
 import 'package:daviet/utils/constants/colors.dart';
-import 'package:daviet/utils/constants/image_strings.dart';
+import 'package:daviet/utils/constants/enums.dart';
 import 'package:daviet/utils/constants/sizes.dart';
 import 'package:daviet/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 
-import '../../../../features/shop/screens/post_details/post_details.dart';
+import '../../../../features/shop/models/product_model.dart';
+import '../../../../features/shop/screens/product_details/product_details.dart';
 import '../../../styles/shadows.dart';
 import '../../icons/t_circular_icon.dart';
 import '../../texts/product_p_text.dart';
 import '../../texts/product_title_text.dart';
 
-class PostCardVertical extends StatelessWidget {
-  const PostCardVertical({super.key});
+class TProductCardVertical extends StatelessWidget {
+  const TProductCardVertical({super.key, required this.product});
+
+  final ProductModel product;
 
   @override
   Widget build(BuildContext context) {
+    final controller = ProductController.instance;
+    final salePercentage =
+        controller.calculateSalePercentage(product.price, product.salePrice);
     final dark = THelperFunctions.isDarkMode(context);
+
     return GestureDetector(
-      onTap: () => Get.to(() => const PostDetail()),
+      onTap: () => Get.to(() => ProductsDetail(
+            product: product,
+          )),
       child: Container(
         width: 180,
         padding: const EdgeInsets.all(1),
@@ -34,19 +44,23 @@ class PostCardVertical extends StatelessWidget {
         child: Column(
           children: [
             // thumbnail wishlist disc
-            const SizedBox(
-              height: TSizes.spaceBtwItems,
-            ),
+            // const SizedBox(
+            //   height: TSizes.spaceBtwItems,
+            // ),
             TRoundedContainer(
               height: 180,
+              width: 180,
               padding: const EdgeInsets.all(TSizes.sm),
               backgroundColor: dark ? TColors.dark : TColors.light,
               child: Stack(
                 children: [
                   // Thumbnail image
-                  const TRoundedImage(
-                    imageUrl: DImages.logoLight,
-                    applyImageRadius: true,
+                  Center(
+                    child: TRoundedImage(
+                      imageUrl: product.thumbnail,
+                      applyImageRadius: true,
+                      isNetworkImage: true,
+                    ),
                   ),
                   Positioned(
                     top: 12,
@@ -56,7 +70,7 @@ class PostCardVertical extends StatelessWidget {
                       backgroundColor: TColors.secondary.withOpacity(0.8),
                       padding: const EdgeInsets.symmetric(
                           horizontal: TSizes.sm, vertical: TSizes.xs),
-                      child: Text('CSE',
+                      child: Text('$salePercentage%',
                           style: Theme.of(context)
                               .textTheme
                               .labelLarge!
@@ -77,33 +91,57 @@ class PostCardVertical extends StatelessWidget {
             const SizedBox(
               height: TSizes.spaceBtwItems / 2,
             ),
-            const Padding(
-              padding: EdgeInsets.only(left: TSizes.sm),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  TProductTitleText(
-                    title: 'Cse Department',
-                    maxLines: 2,
-                    smallSize: true,
-                    textAlign: TextAlign.left,
-                  ),
-                  SizedBox(
-                    height: TSizes.spaceBtwItems / 2,
-                  ),
-                  TBrandTitleWithVerifiedIcon(title: 'CSE'),
-                ],
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: TSizes.sm),
+              child: SizedBox(
+                width: double.infinity,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    TProductTitleText(
+                      title: product.title,
+                      smallSize: true,
+                    ),
+                    const SizedBox(
+                      height: TSizes.spaceBtwItems / 2,
+                    ),
+                    TBrandTitleWithVerifiedIcon(title: product.brand!.name)
+                  ],
+                ),
               ),
             ),
+
             const Spacer(),
+
+            ///Price row
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                const Padding(
-                  padding: EdgeInsets.only(left: TSizes.sm),
-                  child: TProductPText(
-                    price: 'Information',
-                    isLarge: false,
+                ///padding
+                Flexible(
+                  child: Column(
+                    children: [
+                      if (product.productType ==
+                              ProductType.single.toString() &&
+                          product.salePrice > 0)
+                        Padding(
+                          padding: const EdgeInsets.only(left: TSizes.sm),
+
+                          child: Text(
+                            '\$${product.price}',
+                            style: Theme.of(context)
+                                .textTheme
+                                .labelMedium!
+                                .apply(decoration: TextDecoration.lineThrough),
+                          ),
+                        ),
+                      Padding(
+                        padding: const EdgeInsets.only(left: TSizes.sm),
+                        child: TProductPText(
+                          price: controller.getProductPrice(product),
+                        ),
+                      ),
+                    ],
                   ),
                 ),
                 Container(
@@ -119,7 +157,7 @@ class PostCardVertical extends StatelessWidget {
                       height: TSizes.iconLg * 1.2,
                       child: Center(
                           child: Icon(
-                        Iconsax.document_15,
+                        Iconsax.add,
                         color: TColors.white,
                       ))),
                 ),

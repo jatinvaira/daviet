@@ -5,17 +5,19 @@ import 'package:daviet/common/widgets/layouts/grid_layout.dart';
 import 'package:daviet/common/widgets/texts/section_heading.dart';
 import 'package:daviet/features/shop/controllers/category_controller.dart';
 import 'package:daviet/features/shop/screens/brand/all_brands.dart';
-import 'package:daviet/features/shop/screens/departments/widgets/category_tab.dart';
+import 'package:daviet/features/shop/screens/products/widgets/category_tab.dart';
 import 'package:daviet/utils/constants/colors.dart';
 import 'package:daviet/utils/constants/sizes.dart';
 import 'package:daviet/utils/helpers/helper_functions.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../../../common/widgets/depts/dept_card.dart';
+import '../../../../common/widgets/products/cart/cart_menu_icon.dart';
 
-class Departments extends StatelessWidget {
-  const Departments({super.key});
+class Products extends StatelessWidget {
+  const Products({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -30,12 +32,12 @@ class Departments extends StatelessWidget {
         appBar: TAppBar(
           showBackArrow: false,
           title: Text(
-            'Departments',
+            'Products',
             style: Theme.of(context).textTheme.headlineSmall,
           ),
-          // actions: [
-          //   TCartCounterIcon(onPressed: (){}, iconColor: CupertinoColors.darkBackgroundGray)
-          // ],
+          actions: [
+            TCartCounterIcon(onPressed: (){}, iconColor: CupertinoColors.darkBackgroundGray)
+          ],
         ),
         body: NestedScrollView(
             headerSliverBuilder: (_, innerBoxIsScrolled) {
@@ -68,9 +70,9 @@ class Departments extends StatelessWidget {
                           const SizedBox(
                             height: TSizes.spaceBtwSections,
                           ),
-                          // Featured Departments
+                          // Featured Products
                           TSectionHeading(
-                            title: 'Featured Departments',
+                            title: 'Featured Products',
                             onPressed: () =>
                                 Get.to(() => const AllBrandsScreen()),
                           ),

@@ -1,5 +1,4 @@
 import 'package:daviet/data/repositories/authentication/authentication_repository.dart';
-import 'package:daviet/features/authentication/screens/password_configuration/forget_password.dart';
 import 'package:daviet/features/authentication/screens/password_configuration/reset_password.dart';
 import 'package:daviet/utils/helpers/network_manager.dart';
 import 'package:daviet/utils/popups/full_screen_loader.dart';
