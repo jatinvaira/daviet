@@ -1,6 +1,4 @@
 import 'package:flutter/cupertino.dart';
-
-
 import '../../../utils/constants/sizes.dart';
 
 class TRoundedImage extends StatelessWidget {
@@ -30,6 +28,16 @@ class TRoundedImage extends StatelessWidget {
   final VoidCallback? onPressed;
   final double borderRadius;
 
+  ImageProvider _getImageProvider() {
+    if (isNetworkImage && imageUrl.isNotEmpty) {
+      return NetworkImage(imageUrl);
+    } else if (!isNetworkImage && imageUrl.isNotEmpty) {
+      return AssetImage(imageUrl);
+    } else {
+      return const AssetImage('assets/images/banners/promo-banner-1.png');
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -39,18 +47,19 @@ class TRoundedImage extends StatelessWidget {
         height: height,
         padding: padding,
         decoration: BoxDecoration(
-            border: border,
-            color: backgroundColor,
-            borderRadius: BorderRadius.circular(borderRadius)),
+          border: border,
+          color: backgroundColor,
+          borderRadius: BorderRadius.circular(borderRadius),
+        ),
         child: ClipRRect(
-            borderRadius: applyImageRadius
-                ? BorderRadius.circular(borderRadius)
-                : BorderRadius.zero,
-            child: Image(
-                fit: fit,
-                image: isNetworkImage
-                    ? NetworkImage(imageUrl)
-                    : AssetImage(imageUrl) as ImageProvider)),
+          borderRadius: applyImageRadius
+              ? BorderRadius.circular(borderRadius)
+              : BorderRadius.zero,
+          child: Image(
+            fit: fit,
+            image: _getImageProvider(),
+          ),
+        ),
       ),
     );
   }

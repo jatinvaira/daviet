@@ -1,6 +1,6 @@
 import 'package:daviet/common/widgets/appbar/appbar.dart';
 import 'package:daviet/common/widgets/depts/dept_card.dart';
-import 'package:daviet/common/widgets/products/sortable/sortable_posts.dart';
+import 'package:daviet/common/widgets/products/sortable/sortable_products.dart';
 import 'package:daviet/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
 

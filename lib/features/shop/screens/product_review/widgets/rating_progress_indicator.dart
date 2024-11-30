@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:daviet/features/shop/screens/student_review/widgets/progress_indicator_and_rating.dart';
+import 'package:daviet/features/shop/screens/product_review/widgets/progress_indicator_and_rating.dart';
 
 class TOverallProductRating extends StatelessWidget {
   const TOverallProductRating({

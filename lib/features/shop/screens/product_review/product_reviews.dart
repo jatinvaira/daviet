@@ -1,21 +1,20 @@
 import 'package:daviet/common/widgets/appbar/appbar.dart';
 import 'package:daviet/features/shop/screens/student_review/widgets/rating_progress_indicator.dart';
 import 'package:daviet/features/shop/screens/student_review/widgets/user_review_card.dart';
-import 'package:daviet/utils/constants/colors.dart';
 import 'package:daviet/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../common/widgets/products/ratings/rating_indicator.dart';
 
-class StudentReviewScreen extends StatelessWidget {
-  const StudentReviewScreen({super.key});
+class ProductReviewScreen extends StatelessWidget {
+  const ProductReviewScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
       backgroundColor: TColors.dark,
       appBar: const TAppBar(
-        title: Text('Student Reviews'),
+        title: Text('Product Reviews'),
         showBackArrow: true,
       ),
       body: SingleChildScrollView(
@@ -25,7 +24,7 @@ class StudentReviewScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const Text(
-                  'Student Reviews are are verified and are from the people who are the student or any type of connection to the institute.'),
+                  'Product Reviews are are verified and are from the people who are the Product or any type of connection to the institute.'),
               const SizedBox(
                 height: TSizes.spaceBtwItems,
               ),

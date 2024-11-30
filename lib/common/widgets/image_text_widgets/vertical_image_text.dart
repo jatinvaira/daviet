@@ -1,4 +1,4 @@
-
+import 'package:daviet/common/widgets/images/t_circular_image.dart';
 import 'package:flutter/material.dart';
 
 import '../../../utils/constants/colors.dart';
@@ -11,12 +11,14 @@ class TVerticalImageText extends StatelessWidget {
     required this.image,
     required this.title,
     this.textColor = TColors.white,
+    this.isNetworkImage = true,
     this.backgroundColor = TColors.white,
     this.onTap,
   });
 
   final String image, title;
   final Color textColor;
+  final isNetworkImage;
   final Color? backgroundColor;
   final void Function()? onTap;
 
@@ -43,9 +45,9 @@ class TVerticalImageText extends StatelessWidget {
                 child: Image(
                   image: AssetImage(image),
                   fit: BoxFit.cover,
-                  // color: THelperFunctions.isDarkMode(context)
-                  //     ? null
-                  //     : null,
+                  color: THelperFunctions.isDarkMode(context)
+                      ? null
+                      : TColors.dark,
                 ),
               ),
             ),

@@ -13,8 +13,8 @@ import '../../../../utils/constants/sizes.dart';
 import '../../../styles/shadows.dart';
 import '../../icons/t_circular_icon.dart';
 
-class TPostCardHorizontal extends StatelessWidget {
-  const TPostCardHorizontal({super.key});
+class TProductCardHorizontal extends StatelessWidget {
+  const TProductCardHorizontal({super.key});
 
   @override
   Widget build(BuildContext context) {

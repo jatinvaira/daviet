@@ -1,6 +1,6 @@
 import 'package:daviet/features/personalization/screens/settings/settings.dart';
-import 'package:daviet/features/shop/screens/departments/departments.dart';
 import 'package:daviet/features/shop/screens/home/home.dart';
+import 'package:daviet/features/shop/screens/products/products.dart';
 import 'package:daviet/features/shop/screens/saved/saved.dart';
 import 'package:daviet/utils/constants/colors.dart';
 import 'package:daviet/utils/helpers/helper_functions.dart';
@@ -45,7 +45,7 @@ class NavigationController extends GetxController {
   final Rx<int> selectedIndex = 0.obs;
   final screens = [
     const HomeScreen(),
-    const Departments(),
+    const Products(),
     const SavedScreen(),
     const SettingScreen(),
   ];

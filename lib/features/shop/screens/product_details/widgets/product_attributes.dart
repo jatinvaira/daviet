@@ -7,8 +7,8 @@ import 'package:daviet/utils/constants/sizes.dart';
 import 'package:daviet/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
 
-class TPostAttributes extends StatelessWidget {
-  const TPostAttributes({super.key});
+class TProductsAttributes extends StatelessWidget {
+  const TProductsAttributes({super.key});
 
   @override
   Widget build(BuildContext context) {

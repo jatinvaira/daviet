@@ -9,8 +9,8 @@ import '../../../../../utils/constants/colors.dart';
 import '../../../../../utils/constants/image_strings.dart';
 import '../../../../../utils/constants/sizes.dart';
 import '../../../../../utils/helpers/helper_functions.dart';
-class TPostImageSlider extends StatelessWidget {
-  const TPostImageSlider({
+class TProductsImageSlider extends StatelessWidget {
+  const TProductsImageSlider({
     super.key,
   });
 
