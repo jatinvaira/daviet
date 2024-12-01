@@ -2,6 +2,7 @@ import 'package:daviet/common/widgets/images/t_circular_image.dart';
 import 'package:daviet/common/widgets/texts/product_p_text.dart';
 import 'package:daviet/common/widgets/texts/product_title_text.dart';
 import 'package:daviet/common/widgets/texts/t_brand_title_with_verified_icon.dart';
+import 'package:daviet/features/shop/controllers/product/product_controller.dart';
 import 'package:daviet/utils/constants/enums.dart';
 import 'package:daviet/utils/constants/image_strings.dart';
 import 'package:flutter/material.dart';
@@ -9,19 +10,32 @@ import 'package:flutter/material.dart';
 import '../../../../../common/widgets/custom_shapes/containers/rounded_container.dart';
 import '../../../../../utils/constants/colors.dart';
 import '../../../../../utils/constants/sizes.dart';
+import '../../../../../utils/helpers/helper_functions.dart';
+import '../../../models/product_model.dart';
 
 class TProductsMetaData extends StatelessWidget {
-  const TProductsMetaData({super.key});
+  const TProductsMetaData({super.key, required this.product});
+
+  final ProductModel product;
 
   @override
   Widget build(BuildContext context) {
-    // final darkMode = THelperFunctions.isDarkMode(context);
+    final ProductController controller;
+    final darkMode = THelperFunctions.isDarkMode(context);
+    if (ProductController.instance.initialized) {
+      controller = ProductController.instance;
+    } else {
+      controller = ProductController();
+    }
+    final salePercentage =
+        controller.calculateSalePercentage(product.price, product.salePrice);
+
     return Padding(
       padding: const EdgeInsets.only(
-          left: 0,
-          right: 0,
-          bottom: TSizes.defaultSpace,
-          ),
+        left: 0,
+        right: 0,
+        bottom: TSizes.defaultSpace,
+      ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -33,7 +47,7 @@ class TProductsMetaData extends StatelessWidget {
                 backgroundColor: TColors.secondary.withOpacity(0.8),
                 padding: const EdgeInsets.symmetric(
                     horizontal: TSizes.sm, vertical: TSizes.xs),
-                child: Text('25%',
+                child: Text('$salePercentage%',
                     style: Theme.of(context)
                         .textTheme
                         .labelLarge!
@@ -43,52 +57,67 @@ class TProductsMetaData extends StatelessWidget {
                 width: TSizes.spaceBtwItems,
               ),
 
-              Text(
-                '\$250',
-                style: Theme.of(context)
-                    .textTheme
-                    .titleSmall!
-                    .apply(decoration: TextDecoration.lineThrough),
+              if (product.productType == ProductType.single.toString() &&
+                  product.salePrice > 0)
+                Text(
+                  '\$${product.price}',
+                  style: Theme.of(context)
+                      .textTheme
+                      .titleSmall!
+                      .apply(decoration: TextDecoration.lineThrough),
+                ),
+              if (product.productType == ProductType.single.toString() &&
+                  product.salePrice > 0)
+                const SizedBox(
+                  width: TSizes.spaceBtwItems,
+                ),
+              TProductPText(
+                  price: controller.getProductPrice(product), isLarge: true),
+            ],
+          ),
+          const SizedBox(
+            height: TSizes.spaceBtwItems / 1.5,
+          ),
+          TProductTitleText(
+            title: product.title,
+            smallSize: false,
+          ),
+          const SizedBox(
+            height: TSizes.spaceBtwItems / 1.5,
+          ),
+          Row(
+            children: [
+              const TProductTitleText(
+                title: 'Status',
               ),
               const SizedBox(
                 width: TSizes.spaceBtwItems,
               ),
-              const TProductPText(price: '\$175', isLarge: true),
-            ],
-          ),
-          const SizedBox(
-            height: TSizes.spaceBtwItems/1.5,
-          ),
-          const TProductTitleText(
-            title: 'THIS IS A TEST DESCRIPTION',
-          ),
-          const SizedBox(
-            height: TSizes.spaceBtwItems/1.5,
-          ),
-
-          Row(
-            children: [
-              const TProductTitleText(
-                title: 'Status:',
-              ),
-              const SizedBox(
-                width: TSizes.spaceBtwItems/1.5,
-              ),
               Text(
-                'Completed',
+                controller.getProductStockStatus(product.stock),
                 style: Theme.of(context).textTheme.bodyMedium,
               ),
             ],
           ),
           const SizedBox(
-            height: TSizes.spaceBtwItems/1.5,
+            height: TSizes.spaceBtwItems / 1.5,
           ),
-
-          const Row(
+          Row(
             children: [
-              TCircularImage(image: DImages.logoLight, isNetworkImage: false, width: 32, height: 32,),
-              SizedBox(width: TSizes.spaceBtwItems/1.5,),
-              TBrandTitleWithVerifiedIcon(title: 'CSE', brandTextSizes: TextSizes.medium,),
+              TCircularImage(
+                image: product.brand != null ? product.brand!.image : '',
+                isNetworkImage: false,
+                width: 32,
+                height: 32,
+                overlayColor: darkMode ? TColors.white : TColors.black,
+              ),
+              const SizedBox(
+                width: TSizes.spaceBtwItems / 1.5,
+              ),
+              TBrandTitleWithVerifiedIcon(
+                title: product.brand != null ? product.brand!.name : '',
+                brandTextSizes: TextSizes.medium,
+              ),
             ],
           ),
           const SizedBox(

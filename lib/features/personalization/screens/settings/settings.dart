@@ -2,6 +2,8 @@ import 'package:daviet/common/widgets/appbar/appbar.dart';
 import 'package:daviet/common/widgets/custom_shapes/containers/primary_header_container.dart';
 import 'package:daviet/common/widgets/list_tiles/settings_menu_tile.dart';
 import 'package:daviet/common/widgets/texts/section_heading.dart';
+import 'package:daviet/data/dummy_data.dart';
+import 'package:daviet/data/repositories/product_repository.dart';
 import 'package:daviet/features/personalization/screens/address/address.dart';
 import 'package:daviet/features/shop/screens/payments/payments.dart';
 import 'package:daviet/utils/constants/colors.dart';
@@ -21,7 +23,8 @@ class SettingScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: THelperFunctions.isDarkMode(context)? TColors.black: TColors.white,
+      backgroundColor:
+          THelperFunctions.isDarkMode(context) ? TColors.black : TColors.white,
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -39,7 +42,9 @@ class SettingScreen extends StatelessWidget {
                   ),
                   showBackArrow: false,
                 ),
-                 TUserProfileTile(onPressed: () => Get.to(() => const ProfileScreen()),),
+                TUserProfileTile(
+                  onPressed: () => Get.to(() => const ProfileScreen()),
+                ),
                 const SizedBox(
                   height: TSizes.spaceBtwSections * 1.5,
                 ),
@@ -65,7 +70,8 @@ class SettingScreen extends StatelessWidget {
                     title: 'My Academics',
                     subTitle: 'Your academics in one section',
                     onTap: () {},
-                  ),TSettingsMenuTile(
+                  ),
+                  TSettingsMenuTile(
                     icon: Iconsax.safe_home,
                     title: 'My Addresses',
                     subTitle: 'Your addresses in one section',
@@ -101,11 +107,26 @@ class SettingScreen extends StatelessWidget {
                     subTitle: 'Schedule appointments with your advisor',
                     onTap: () {},
                   ),
+                  const TSettingsMenuTile(
+                    icon: Iconsax.document_upload,
+                    title: 'Upload Data',
+                    subTitle: 'Upload sample data',
+                    // onTap: () async {
+                    //   try {
+                    //     await ProductRepository.instance
+                    //         .uploadDummyData(TDummyData.products);
+                    //     Get.snackbar('Success', 'Data uploaded successfully!');
+                    //   } catch (e) {
+                    //     Get.snackbar('Error', 'Failed to upload data: $e');
+                    //     debugPrint('Error: $e');
+                    //   }
+                    // },
+                  ),
                   TSettingsMenuTile(
                     icon: Iconsax.money,
                     title: 'Fee Payments',
                     subTitle: 'Check your previous payments',
-                    onTap: () => Get.to(()=> const PaymentsScreen()),
+                    onTap: () => Get.to(() => const PaymentsScreen()),
                   ),
                   const SizedBox(
                     height: TSizes.spaceBtwSections,
@@ -166,7 +187,11 @@ class SettingScreen extends StatelessWidget {
                   ),
                   SizedBox(
                     width: double.infinity,
-                    child: OutlinedButton(onPressed: () => AuthenticationRepository.instance.logout(), child: const Text('Logout'),),
+                    child: OutlinedButton(
+                      onPressed: () =>
+                          AuthenticationRepository.instance.logout(),
+                      child: const Text('Logout'),
+                    ),
                   ),
                   const SizedBox(
                     height: TSizes.spaceBtwSections,

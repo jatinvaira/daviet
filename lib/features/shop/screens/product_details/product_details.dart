@@ -8,6 +8,7 @@ import 'package:daviet/features/shop/screens/product_details/widgets/rating_shar
 import 'package:daviet/features/shop/screens/product_review/product_reviews.dart';
 
 import 'package:daviet/utils/constants/colors.dart';
+import 'package:daviet/utils/constants/enums.dart';
 
 import 'package:daviet/utils/constants/sizes.dart';
 import 'package:daviet/utils/helpers/helper_functions.dart';
@@ -17,33 +18,43 @@ import 'package:iconsax/iconsax.dart';
 import 'package:readmore/readmore.dart';
 
 class ProductsDetail extends StatelessWidget {
-  const ProductsDetail({super.key, required this.product,});
+  const ProductsDetail({
+    super.key,
+    required this.product,
+  });
 
   final ProductModel product;
+
   @override
   Widget build(BuildContext context) {
     final dark = THelperFunctions.isDarkMode(context);
+
     return Scaffold(
       bottomNavigationBar: const TBottomAddToCart(),
       backgroundColor: dark ? TColors.dark : TColors.light,
       body: SingleChildScrollView(
         child: Column(
           children: [
-            const TProductsImageSlider(),
+            TProductsImageSlider(product: product),
             Padding(
               padding: const EdgeInsets.only(
                   right: TSizes.defaultSpace,
                   left: TSizes.defaultSpace,
                   bottom: TSizes.defaultSpace),
+
               // checkout button
               child: Column(
                 children: [
                   const TRatingAndShare(),
-                  const TProductsMetaData(),
-                  const TProductsAttributes(),
-                  const SizedBox(
-                    height: TSizes.spaceBtwSections,
-                  ),
+
+                  TProductsMetaData(product: product),
+
+                  if (product.productType == ProductType.variable.toString())
+                    TProductsAttributes(product: product),
+
+                  if (product.productType == ProductType.variable.toString())
+                    const SizedBox(height: TSizes.spaceBtwSections),
+
                   SizedBox(
                       width: double.infinity,
                       child: ElevatedButton(
@@ -60,8 +71,8 @@ class ProductsDetail extends StatelessWidget {
                   const SizedBox(
                     height: TSizes.spaceBtwItems,
                   ),
-                  const ReadMoreText(
-                    'Department of Computer Science and Engineering was established in 2001 to offer Bachelor of Technology in Computer Science and Engineering.The department maintains an excellent teaching/learning and research environment with dedicated, qualified and dynamic faculty members and well equipped laboratories.The core competencies of the department include software engineering, computer network and security, soft computing, relational database management system, operating system etc.The products of our department take up careers in various computing industries and large engineering companies, start-up companies, management companies and other government based research organizations.',
+                  ReadMoreText(
+                    product.description ?? '',
                     trimLines: 2,
                     trimMode: TrimMode.Line,
                     trimCollapsedText: 'Show more',

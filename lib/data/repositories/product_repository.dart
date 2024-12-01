@@ -1,10 +1,13 @@
 import 'dart:io';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 
 import '../../features/shop/models/product_model.dart';
+import '../../utils/constants/enums.dart';
 import '../../utils/exceptions/firebase_exceptions.dart';
 import '../../utils/exceptions/platform_exceptions.dart';
 import '../firebase_storage_service.dart';
@@ -33,83 +36,105 @@ class ProductRepository extends GetxController {
     }
   }
 
+  // Future<void> uploadDummyData(List<ProductModel> products) async {
+  //   try {
+  //     // Get an instance of the Firebase Storage service
+  //     final storage = Get.put(TFirebaseStorageService());
+  //
+  //     // Loop through each product
+  //     for (var product in products) {
+  //       // Upload and update the thumbnail image
+  //       final thumbnail =
+  //       await storage.getImageDataFromAssets(product.thumbnail);
+  //       product.thumbnail = await storage.uploadImageData(
+  //           'Products/Images', thumbnail, product.thumbnail.toString());
+  //
+  //       // Upload and update additional product images
+  //       if (product.images != null && product.images!.isNotEmpty) {
+  //         product.images = await Future.wait(product.images!.map((image) async {
+  //           final assetImage = await storage.getImageDataFromAssets(image);
+  //           return await storage.uploadImageData(
+  //               'Products/Images', assetImage, image);
+  //         }).toList());
+  //       }
+  //
+  //       // Upload and update variation images for variable products
+  //       if (product.productType == ProductType.variable.toString() &&
+  //           product.productVariations != null) {
+  //         for (var variation in product.productVariations!) {
+  //           final assetImage =
+  //           await storage.getImageDataFromAssets(variation.image);
+  //           variation.image = await storage.uploadImageData(
+  //               'Products/Images', assetImage, variation.image);
+  //         }
+  //       }
+  //
+  //       // Store the updated product in Firestore
+  //       await _db.collection("Products").doc(product.id).set(product.toJson());
+  //     }
+  //   } on FirebaseException catch (e) {
+  //     throw TFirebaseException(e.code).message;
+  //   } on SocketException catch (e) {
+  //     throw 'Network error: ${e.message}';
+  //   } on PlatformException catch (e) {
+  //     throw TPlatformException(e.code).message;
+  //   } catch (e) {
+  //     throw 'An unexpected error occurred: $e';
+  //   }
+  // }
+
   Future<void> uploadDummyData(List<ProductModel> products) async {
     try {
-      // Get an instance of the Firebase Storage service
-      final storage = Get.put(TFirebaseStorageService());
-
-      // Loop through each product
-      for (var product in products) {
-        // Get image data link from local assets for the product's thumbnail
-        final thumbnail =
-            await storage.getImageDataFromAssets(product.thumbnail);
-
-        // Upload thumbnail image and get its URL
-        final url = await storage.uploadImageData(
-            'Products/Images', thumbnail, product.thumbnail.toString());
-
-        // Update the product's thumbnail attribute with the new URL
-        product.thumbnail = url;
-
-        // Handle the product's list of additional images
-        if (product.images != null && product.images!.isNotEmpty) {
-          List<String> imagesUrl = [];
-          for (var image in product.images!) {
-            // Get image data link from local assets for each image
-            final assetImage = await storage.getImageDataFromAssets(image);
-
-            // Upload image and get its URL
-            final url = await storage.uploadImageData(
-                'Products/Images', assetImage, image);
-
-            imagesUrl.add(url);
-          }
-          // Clear the old image list and add the new URLs
-          product.images!.clear();
-          product.images!.addAll(imagesUrl);
-        }
-
-        // Handle uploading variation images if the product is variable
-        // if (product.productType == ProductType.variable.toString()) {
-        //   for (var variation in product.productVariations!) {
-        //     // Get image data link from local assets for the variation image
-        //     final assetImage =
-        //         await storage.getImageDataFromAssets(variation.image);
-        //
-        //     // Upload variation image and get its URL
-        //     final url = await storage.uploadImageData(
-        //         'Products/Images', assetImage, variation.image);
-        //
-        //     // Update the variation's image attribute with the new URL
-        //     variation.image = url;
-        //   }
-        // }
-
-        if (product.productType == products.toString()) {
-          for (var variation in product.productVariations!) {
-            // Get image data link from local assets for the variation image
-            final assetImage =
-                await storage.getImageDataFromAssets(variation.image);
-
-            // Upload variation image and get its URL
-            final url = await storage.uploadImageData(
-                'Products/Images', assetImage, variation.image);
-
-            // Update the variation's image attribute with the new URL
-            variation.image = url;
-          }
-        }
-        // Store the updated product in Firestore
-        await _db.collection("Products").doc(product.id).set(product.toJson());
+      final user = FirebaseAuth.instance.currentUser;
+      if (user == null) {
+        throw 'User is not authenticated';
       }
-    } on FirebaseException catch (e) {
-      throw e.message!;
-    } on SocketException catch (e) {
-      throw e.message;
-    } on PlatformException catch (e) {
-      throw e.message!;
+
+      final storage = Get.put(TFirebaseStorageService());
+      final batch = _db.batch();
+
+      for (var product in products) {
+        // Upload and update the thumbnail image
+        product.thumbnail =
+            await uploadImage('Products/Images', product.thumbnail);
+
+        // Upload and update additional product images
+        if (product.images?.isNotEmpty == true) {
+          product.images = await Future.wait(product.images!.map((image) async {
+            return await uploadImage('Products/Images', image);
+          }).toList());
+        }
+
+        // Upload and update variation images for variable products
+        if (product.productType == ProductType.variable.name &&
+            product.productVariations != null) {
+          for (var variation in product.productVariations!) {
+            variation.image =
+                await uploadImage('Products/Images', variation.image);
+          }
+        }
+
+        // Add Firestore write to batch
+        final productRef = _db.collection("Products").doc(product.id);
+        batch.set(productRef, product.toJson());
+      }
+
+      // Commit batch write
+      await batch.commit();
+      if (kDebugMode) {
+        print('All products uploaded successfully.');
+      }
     } catch (e) {
-      throw e.toString();
+      if (kDebugMode) {
+        print('Error uploading data: $e');
+      }
+      rethrow; // Rethrow for further handling if needed
     }
+  }
+
+  Future<String> uploadImage(String path, String imageName) async {
+    final storage = Get.find<TFirebaseStorageService>();
+    final imageData = await storage.getImageDataFromAssets(imageName);
+    return await storage.uploadImageData(path, imageData, imageName);
   }
 }

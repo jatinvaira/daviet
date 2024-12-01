@@ -1,7 +1,7 @@
 import 'package:daviet/common/widgets/custom_shapes/containers/rounded_container.dart';
 import 'package:daviet/common/widgets/images/t_rounded_image.dart';
 import 'package:daviet/common/widgets/texts/t_brand_title_with_verified_icon.dart';
-import 'package:daviet/features/shop/controllers/product_controller.dart';
+import 'package:daviet/features/shop/controllers/product/product_controller.dart';
 import 'package:daviet/utils/constants/colors.dart';
 import 'package:daviet/utils/constants/enums.dart';
 import 'package:daviet/utils/constants/sizes.dart';

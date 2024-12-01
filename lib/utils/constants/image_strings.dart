@@ -47,17 +47,17 @@ class DImages {
       "assets/icons/categories/icons8-smartphone-64.png";
 
   // -- Brand Icons
-  static const String nikeLogo = "assets/icons/brands/nike.png";
-  static const String adidasLogo = "assets/icons/brands/adidas-logo.png";
-  static const String appleLogo = "assets/icons/brands/apple-logo.png";
-  static const String jordanLogo = "assets/icons/brands/jordan-logo.png";
-  static const String pumaLogo = "assets/icons/brands/puma-logo.png";
-  static const String zaraLogo = "assets/icons/brands/zara-logo.png";
-  static const String kenwoodLogo = "assets/icons/brands/kenwood-logo.png";
-  static const String hermanMillerLogo =
-      "assets/icons/brands/herman-miller-logo.png";
-  static const String ikeaLogo = "assets/icons/brands/ikea_logo.png";
-  static const String acerlogo = "assets/icons/brands/acer_logo.png";
+  // static const String nikeLogo = "assets/icons/brands/nike.png";
+  // static const String adidasLogo = "assets/icons/brands/adidas-logo.png";
+  // static const String appleLogo = "assets/icons/brands/apple-logo.png";
+  // static const String jordanLogo = "assets/icons/brands/jordan-logo.png";
+  // static const String pumaLogo = "assets/icons/brands/puma-logo.png";
+  // static const String zaraLogo = "assets/icons/brands/zara-logo.png";
+  // static const String kenwoodLogo = "assets/icons/brands/kenwood-logo.png";
+  // static const String hermanMillerLogo =
+  //     "assets/icons/brands/herman-miller-logo.png";
+  // static const String ikeaLogo = "assets/icons/brands/ikea_logo.png";
+  // static const String acerlogo = "assets/icons/brands/acer_logo.png";
 
   // -- Animations
   static const String productsIllustration =
@@ -97,39 +97,54 @@ class DImages {
   static String LoaderAnimation = "assets/images/animations/loader-animation.json";
 
 
-
+  static const String nikeLogo = 'assets/images/nike_logo.png';
+  static const String adidasLogo = 'assets/images/adidas_logo.png';
+  static const String pumaLogo = 'assets/images/puma_logo.png';
 
   // -- Products
-  static const String productImage1 = "assets/images/products/nike-shoes.png";
-  static const String productImage2 = "assets/images/products/product-1.png";
-  static const String productImage3 =
-      "assets/images/products/product-jacket.png";
-  static const String productImage4 =
-      "assets/images/products/product-jeans.png";
-  static const String productImage5 =
-      "assets/images/products/product-shirt.png";
-  static const String productImage6 =
-      "assets/images/products/product-slippers.png";
-  static const String productImage7 =
-      "assets/images/products/NikeAirJOrdonBlackRed.png";
-  static const String productImage8 =
-      "assets/images/products/NikeAirJOrdonOrange.png";
-  static const String productImage9 =
-      "assets/images/products/NikeAirJordonwhiteMagenta.png";
-  static const String productImage10 =
-      "assets/images/products/NikeAirJOrdonWhiteRed.png";
-  static const String productImage11 =
-      "assets/images/products/samsung_s9_mobile.png";
-  static const String productImage12 =
-      "assets/images/products/samsung_s9_mobile_withback.png";
-  static const String productImage13 =
-      "assets/images/products/samsung_s9_mobile_back.png";
-  static const String productImage14 =
-      "assets/images/products/iphone8_mobile.png";
-  static const String productImage15 =
-      "assets/images/products/iphone8_mobile_back.png";
-  static const String productImage16 =
-      "assets/images/products/iphone8_mobile_dual_side.png";
+  static const String productImage1 = 'assets/images/product_image1.png';
+  static const String productImage2 = 'assets/images/product_image2.png';
+  static const String productImage3 = 'assets/images/product_image3.png';
+  static const String productImage4 = 'assets/images/product_image4.png';
+  static const String productImage5 = 'assets/images/product_image5.png';
+  static const String productImage6 = 'assets/images/product_image6.png';
+  static const String productImage7 = 'assets/images/product_image7.png';
+  static const String productImage8 = 'assets/images/product_image8.png';
+  static const String productImage9 = 'assets/images/product_image9.png';
+  static const String productImage10 = 'assets/images/product_image10.png';
+  static const String productImage11 = 'assets/images/product_image11.png';
+  static const String productImage12 = 'assets/images/product_image12.png';
+  static const String productImage13 = 'assets/images/product_image13.png';
+  // static const String productImage1 = "assets/images/products/nike-shoes.png";
+  // static const String productImage2 = "assets/images/products/product-1.png";
+  // static const String productImage3 =
+  //     "assets/images/products/product-jacket.png";
+  // static const String productImage4 =
+  //     "assets/images/products/product-jeans.png";
+  // static const String productImage5 =
+  //     "assets/images/products/product-shirt.png";
+  // static const String productImage6 =
+  //     "assets/images/products/product-slippers.png";
+  // static const String productImage7 =
+  //     "assets/images/products/NikeAirJOrdonBlackRed.png";
+  // static const String productImage8 =
+  //     "assets/images/products/NikeAirJOrdonOrange.png";
+  // static const String productImage9 =
+  //     "assets/images/products/NikeAirJordonwhiteMagenta.png";
+  // static const String productImage10 =
+  //     "assets/images/products/NikeAirJOrdonWhiteRed.png";
+  // static const String productImage11 =
+  //     "assets/images/products/samsung_s9_mobile.png";
+  // static const String productImage12 =
+  //     "assets/images/products/samsung_s9_mobile_withback.png";
+  // static const String productImage13 =
+  //     "assets/images/products/samsung_s9_mobile_back.png";
+  // static const String productImage14 =
+  //     "assets/images/products/iphone8_mobile.png";
+  // static const String productImage15 =
+  //     "assets/images/products/iphone8_mobile_back.png";
+  // static const String productImage16 =
+  //     "assets/images/products/iphone8_mobile_dual_side.png";
   static const String productImage17 =
       "assets/images/products/iphone8_mobile_front.png";
   static const String productImage18 =

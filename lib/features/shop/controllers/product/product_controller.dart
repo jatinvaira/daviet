@@ -3,7 +3,7 @@ import 'package:daviet/utils/constants/enums.dart';
 import 'package:daviet/utils/popups/loaders.dart';
 import 'package:get/get.dart';
 
-import '../../../data/repositories/product_repository.dart';
+import '../../../../data/repositories/product_repository.dart';
 
 class ProductController extends GetxController {
   static ProductController get instance => Get.find();
@@ -33,7 +33,7 @@ class ProductController extends GetxController {
   }
 
 
-  /// Get Procuct Price
+  /// Get Product Price
   String getProductPrice(ProductModel product) {
     double smallestPrice = double.infinity;
     double largestPrice = 0.0;
