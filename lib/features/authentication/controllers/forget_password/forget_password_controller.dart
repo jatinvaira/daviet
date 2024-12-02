@@ -1,8 +1,8 @@
-import 'package:buxx/data/repositories/authentication/authentication_repository.dart';
-import 'package:buxx/features/authentication/screens/password_configuration/reset_password.dart';
-import 'package:buxx/utils/helpers/network_manager.dart';
-import 'package:buxx/utils/popups/full_screen_loader.dart';
-import 'package:buxx/utils/popups/loaders.dart';
+import 'package:daviet/data/repositories/authentication/authentication_repository.dart';
+import 'package:daviet/features/authentication/screens/password_configuration/reset_password.dart';
+import 'package:daviet/utils/helpers/network_manager.dart';
+import 'package:daviet/utils/popups/full_screen_loader.dart';
+import 'package:daviet/utils/popups/loaders.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 

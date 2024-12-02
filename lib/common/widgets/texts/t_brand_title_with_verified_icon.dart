@@ -1,7 +1,7 @@
-import 'package:buxx/common/widgets/texts/t_brand_title_text.dart';
-import 'package:buxx/utils/constants/colors.dart';
-import 'package:buxx/utils/constants/enums.dart';
-import 'package:buxx/utils/constants/sizes.dart';
+import 'package:daviet/common/widgets/texts/t_brand_title_text.dart';
+import 'package:daviet/utils/constants/colors.dart';
+import 'package:daviet/utils/constants/enums.dart';
+import 'package:daviet/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 

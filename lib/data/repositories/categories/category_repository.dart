@@ -1,5 +1,5 @@
 
-import 'package:buxx/features/shop/models/category_model.dart';
+import 'package:daviet/features/shop/models/category_model.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';

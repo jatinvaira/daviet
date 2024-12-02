@@ -1,4 +1,4 @@
-import 'package:buxx/features/authentication/controllers/login/login_controller.dart';
+import 'package:daviet/features/authentication/controllers/login/login_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

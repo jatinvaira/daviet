@@ -1,6 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:buxx/features/shop/models/product_attribute_model.dart';
-import 'package:buxx/features/shop/models/product_variation_model.dart';
+import 'package:daviet/features/shop/models/product_attribute_model.dart';
+import 'package:daviet/features/shop/models/product_variation_model.dart';
 
 import 'brand_model.dart';
 

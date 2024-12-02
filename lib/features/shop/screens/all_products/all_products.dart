@@ -1,8 +1,8 @@
-import 'package:buxx/utils/helpers/cloud_helper_functions.dart';
+import 'package:daviet/utils/helpers/cloud_helper_functions.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:buxx/common/widgets/appbar/appbar.dart';
-import 'package:buxx/common/widgets/shimmers/vertical_product_shimmer.dart';
-import 'package:buxx/utils/constants/sizes.dart';
+import 'package:daviet/common/widgets/appbar/appbar.dart';
+import 'package:daviet/common/widgets/shimmers/vertical_product_shimmer.dart';
+import 'package:daviet/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

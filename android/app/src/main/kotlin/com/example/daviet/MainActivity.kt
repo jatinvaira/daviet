@@ -1,4 +1,4 @@
-package com.example.buxx
+package com.example.daviet
 
 import io.flutter.embedding.android.FlutterActivity
 

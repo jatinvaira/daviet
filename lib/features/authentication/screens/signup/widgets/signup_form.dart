@@ -1,7 +1,7 @@
-import 'package:buxx/features/authentication/controllers/signup/signup_controller.dart';
-import 'package:buxx/features/authentication/screens/signup/widgets/term_and_conditions.dart';
-import 'package:buxx/utils/helpers/helper_functions.dart';
-import 'package:buxx/utils/validators/validation.dart';
+import 'package:daviet/features/authentication/controllers/signup/signup_controller.dart';
+import 'package:daviet/features/authentication/screens/signup/widgets/term_and_conditions.dart';
+import 'package:daviet/utils/helpers/helper_functions.dart';
+import 'package:daviet/utils/validators/validation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';

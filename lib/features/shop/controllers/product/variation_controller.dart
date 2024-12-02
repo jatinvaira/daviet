@@ -1,6 +1,6 @@
-import 'package:buxx/features/shop/controllers/product/images_controller.dart';
-import 'package:buxx/features/shop/models/product_model.dart';
-import 'package:buxx/features/shop/models/product_variation_model.dart';
+import 'package:daviet/features/shop/controllers/product/images_controller.dart';
+import 'package:daviet/features/shop/models/product_model.dart';
+import 'package:daviet/features/shop/models/product_variation_model.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 

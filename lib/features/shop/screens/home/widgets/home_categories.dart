@@ -1,5 +1,5 @@
-import 'package:buxx/features/shop/controllers/category_controller.dart';
-import 'package:buxx/features/shop/screens/sub_category/sub_categories.dart';
+import 'package:daviet/features/shop/controllers/category_controller.dart';
+import 'package:daviet/features/shop/screens/sub_category/sub_categories.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

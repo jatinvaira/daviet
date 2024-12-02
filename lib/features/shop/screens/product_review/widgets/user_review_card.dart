@@ -1,8 +1,8 @@
-import 'package:buxx/common/widgets/custom_shapes/containers/rounded_container.dart';
-import 'package:buxx/common/widgets/products/ratings/rating_indicator.dart';
-import 'package:buxx/utils/constants/colors.dart';
-import 'package:buxx/utils/constants/sizes.dart';
-import 'package:buxx/utils/helpers/helper_functions.dart';
+import 'package:daviet/common/widgets/custom_shapes/containers/rounded_container.dart';
+import 'package:daviet/common/widgets/products/ratings/rating_indicator.dart';
+import 'package:daviet/utils/constants/colors.dart';
+import 'package:daviet/utils/constants/sizes.dart';
+import 'package:daviet/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
 import 'package:readmore/readmore.dart';
 

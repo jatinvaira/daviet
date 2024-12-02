@@ -1,7 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:buxx/data/repositories/product_repository.dart';
-import 'package:buxx/features/shop/models/product_model.dart';
-import 'package:buxx/utils/popups/loaders.dart';
+import 'package:daviet/data/repositories/product_repository.dart';
+import 'package:daviet/features/shop/models/product_model.dart';
+import 'package:daviet/utils/popups/loaders.dart';
 import 'package:get/get.dart';
 
 class AllProductsController extends GetxController {

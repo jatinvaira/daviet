@@ -1,10 +1,10 @@
 import 'dart:io';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:buxx/data/repositories/authentication/authentication_repository.dart';
-import 'package:buxx/utils/exceptions/firebase_exceptions.dart';
-import 'package:buxx/utils/exceptions/format_exceptions.dart';
-import 'package:buxx/utils/exceptions/platform_exceptions.dart';
+import 'package:daviet/data/repositories/authentication/authentication_repository.dart';
+import 'package:daviet/utils/exceptions/firebase_exceptions.dart';
+import 'package:daviet/utils/exceptions/format_exceptions.dart';
+import 'package:daviet/utils/exceptions/platform_exceptions.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';

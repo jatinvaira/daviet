@@ -1,7 +1,7 @@
-import 'package:buxx/common/widgets/layouts/grid_layout.dart';
-import 'package:buxx/common/widgets/products/product_cards/product_card_vertical.dart';
-import 'package:buxx/common/widgets/texts/section_heading.dart';
-import 'package:buxx/features/shop/models/category_model.dart';
+import 'package:daviet/common/widgets/layouts/grid_layout.dart';
+import 'package:daviet/common/widgets/products/product_cards/product_card_vertical.dart';
+import 'package:daviet/common/widgets/texts/section_heading.dart';
+import 'package:daviet/features/shop/models/category_model.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../common/widgets/depts/dept_show_case.dart';

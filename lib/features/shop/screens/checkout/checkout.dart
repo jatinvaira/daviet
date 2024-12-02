@@ -1,15 +1,15 @@
-import 'package:buxx/common/widgets/appbar/appbar.dart';
-import 'package:buxx/common/widgets/custom_shapes/containers/rounded_container.dart';
-import 'package:buxx/common/widgets/success_screen/success_screen.dart';
-import 'package:buxx/features/shop/screens/cart/widgets/cart_items.dart';
-import 'package:buxx/features/shop/screens/checkout/widgets/billing_address_section.dart';
-import 'package:buxx/features/shop/screens/checkout/widgets/billing_amount_section.dart';
-import 'package:buxx/features/shop/screens/checkout/widgets/billing_payment_section.dart';
-import 'package:buxx/navigation_menu.dart';
-import 'package:buxx/utils/constants/colors.dart';
-import 'package:buxx/utils/constants/image_strings.dart';
-import 'package:buxx/utils/constants/sizes.dart';
-import 'package:buxx/utils/helpers/helper_functions.dart';
+import 'package:daviet/common/widgets/appbar/appbar.dart';
+import 'package:daviet/common/widgets/custom_shapes/containers/rounded_container.dart';
+import 'package:daviet/common/widgets/success_screen/success_screen.dart';
+import 'package:daviet/features/shop/screens/cart/widgets/cart_items.dart';
+import 'package:daviet/features/shop/screens/checkout/widgets/billing_address_section.dart';
+import 'package:daviet/features/shop/screens/checkout/widgets/billing_amount_section.dart';
+import 'package:daviet/features/shop/screens/checkout/widgets/billing_payment_section.dart';
+import 'package:daviet/navigation_menu.dart';
+import 'package:daviet/utils/constants/colors.dart';
+import 'package:daviet/utils/constants/image_strings.dart';
+import 'package:daviet/utils/constants/sizes.dart';
+import 'package:daviet/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

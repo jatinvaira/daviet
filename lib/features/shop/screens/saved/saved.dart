@@ -1,9 +1,9 @@
-import 'package:buxx/common/widgets/appbar/appbar.dart';
-import 'package:buxx/common/widgets/icons/t_circular_icon.dart';
-import 'package:buxx/common/widgets/layouts/grid_layout.dart';
-import 'package:buxx/common/widgets/products/product_cards/product_card_vertical.dart';
-import 'package:buxx/features/shop/screens/home/home.dart';
-import 'package:buxx/utils/constants/sizes.dart';
+import 'package:daviet/common/widgets/appbar/appbar.dart';
+import 'package:daviet/common/widgets/icons/t_circular_icon.dart';
+import 'package:daviet/common/widgets/layouts/grid_layout.dart';
+import 'package:daviet/common/widgets/products/product_cards/product_card_vertical.dart';
+import 'package:daviet/features/shop/screens/home/home.dart';
+import 'package:daviet/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';

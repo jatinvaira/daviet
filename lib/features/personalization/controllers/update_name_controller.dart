@@ -1,9 +1,9 @@
-import 'package:buxx/data/repositories/user/user_repository.dart';
-import 'package:buxx/features/personalization/controllers/user_controller.dart';
-import 'package:buxx/features/personalization/screens/profile/profile.dart';
-import 'package:buxx/utils/helpers/network_manager.dart';
-import 'package:buxx/utils/popups/full_screen_loader.dart';
-import 'package:buxx/utils/popups/loaders.dart';
+import 'package:daviet/data/repositories/user/user_repository.dart';
+import 'package:daviet/features/personalization/controllers/user_controller.dart';
+import 'package:daviet/features/personalization/screens/profile/profile.dart';
+import 'package:daviet/utils/helpers/network_manager.dart';
+import 'package:daviet/utils/popups/full_screen_loader.dart';
+import 'package:daviet/utils/popups/loaders.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 

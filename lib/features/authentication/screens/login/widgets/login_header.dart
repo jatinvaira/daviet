@@ -1,7 +1,7 @@
-import 'package:buxx/utils/constants/image_strings.dart';
-import 'package:buxx/utils/constants/sizes.dart';
-import 'package:buxx/utils/constants/text_strings.dart';
-import 'package:buxx/utils/helpers/helper_functions.dart';
+import 'package:daviet/utils/constants/image_strings.dart';
+import 'package:daviet/utils/constants/sizes.dart';
+import 'package:daviet/utils/constants/text_strings.dart';
+import 'package:daviet/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
 
 class DLoginHeader extends StatelessWidget {

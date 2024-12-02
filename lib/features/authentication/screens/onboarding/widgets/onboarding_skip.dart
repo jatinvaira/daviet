@@ -1,6 +1,6 @@
-import 'package:buxx/features/authentication/controllers/onboarding/onboarding_controller.dart';
-import 'package:buxx/utils/constants/sizes.dart';
-import 'package:buxx/utils/device/device_utility.dart';
+import 'package:daviet/features/authentication/controllers/onboarding/onboarding_controller.dart';
+import 'package:daviet/utils/constants/sizes.dart';
+import 'package:daviet/utils/device/device_utility.dart';
 import 'package:flutter/material.dart';
 
 

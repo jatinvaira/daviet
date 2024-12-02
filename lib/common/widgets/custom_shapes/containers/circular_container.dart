@@ -1,4 +1,4 @@
-import 'package:buxx/utils/constants/colors.dart';
+import 'package:daviet/utils/constants/colors.dart';
 import 'package:flutter/material.dart';
 
 class TCircularContainer extends StatelessWidget {

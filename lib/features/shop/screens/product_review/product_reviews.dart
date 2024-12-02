@@ -1,7 +1,7 @@
-import 'package:buxx/common/widgets/appbar/appbar.dart';
-import 'package:buxx/features/shop/screens/product_review/widgets/rating_progress_indicator.dart';
-import 'package:buxx/features/shop/screens/product_review/widgets/user_review_card.dart';
-import 'package:buxx/utils/constants/sizes.dart';
+import 'package:daviet/common/widgets/appbar/appbar.dart';
+import 'package:daviet/features/shop/screens/product_review/widgets/rating_progress_indicator.dart';
+import 'package:daviet/features/shop/screens/product_review/widgets/user_review_card.dart';
+import 'package:daviet/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../common/widgets/products/ratings/rating_indicator.dart';

@@ -1,4 +1,4 @@
-import 'package:buxx/common/widgets/images/t_circular_image.dart';
+import 'package:daviet/common/widgets/images/t_circular_image.dart';
 import 'package:flutter/material.dart';
 
 import '../../../utils/constants/colors.dart';

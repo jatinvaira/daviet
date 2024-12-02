@@ -1,10 +1,10 @@
-import 'package:buxx/common/widgets/custom_shapes/containers/rounded_container.dart';
-import 'package:buxx/common/widgets/images/t_rounded_image.dart';
-import 'package:buxx/common/widgets/texts/product_p_text.dart';
-import 'package:buxx/common/widgets/texts/product_title_text.dart';
-import 'package:buxx/common/widgets/texts/t_brand_title_with_verified_icon.dart';
-import 'package:buxx/utils/constants/image_strings.dart';
-import 'package:buxx/utils/helpers/helper_functions.dart';
+import 'package:daviet/common/widgets/custom_shapes/containers/rounded_container.dart';
+import 'package:daviet/common/widgets/images/t_rounded_image.dart';
+import 'package:daviet/common/widgets/texts/product_p_text.dart';
+import 'package:daviet/common/widgets/texts/product_title_text.dart';
+import 'package:daviet/common/widgets/texts/t_brand_title_with_verified_icon.dart';
+import 'package:daviet/utils/constants/image_strings.dart';
+import 'package:daviet/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 
@@ -81,13 +81,13 @@ class TProductCardHorizontal extends StatelessWidget {
                   const Column(
                     children: [
                       TProductTitleText(
-                        title: 'Clicker is the photography club of buxx',
+                        title: 'Clicker is the photography club of daviet',
                         smallSize: true,
                       ),
                       SizedBox(
                         height: TSizes.spaceBtwItems / 2,
                       ),
-                      TBrandTitleWithVerifiedIcon(title: 'buxx')
+                      TBrandTitleWithVerifiedIcon(title: 'daviet')
                     ],
                   ),
                   const Spacer(),

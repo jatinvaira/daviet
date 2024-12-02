@@ -1,6 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:buxx/features/shop/models/product_model.dart';
-import 'package:buxx/utils/constants/sizes.dart';
+import 'package:daviet/features/shop/models/product_model.dart';
+import 'package:daviet/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

@@ -1,4 +1,4 @@
-import 'package:buxx/features/shop/screens/cart/cart.dart';
+import 'package:daviet/features/shop/screens/cart/cart.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';

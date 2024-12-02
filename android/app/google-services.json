@@ -1,15 +1,15 @@
 {
   "project_info": {
     "project_number": "295190248125",
-    "project_id": "mybuxx",
-    "storage_bucket": "mybuxx.appspot.com"
+    "project_id": "mydaviet",
+    "storage_bucket": "mydaviet.appspot.com"
   },
   "client": [
     {
       "client_info": {
         "mobilesdk_app_id": "1:295190248125:android:557b711eff89b1560b55d4",
         "android_client_info": {
-          "package_name": "com.example.buxx"
+          "package_name": "com.example.daviet"
         }
       },
       "oauth_client": [
@@ -17,7 +17,7 @@
           "client_id": "295190248125-h7cmoi8tdmd0dje4bqc1ro22r92p1nep.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.example.buxx",
+            "package_name": "com.example.daviet",
             "certificate_hash": "56a9500aea4a36e856b5261d8a8ca18ee282162f"
           }
         },
@@ -42,7 +42,7 @@
               "client_id": "295190248125-lavo54gpo5u6c5ocrue00tlnup84khvo.apps.googleusercontent.com",
               "client_type": 2,
               "ios_info": {
-                "bundle_id": "com.example.buxx"
+                "bundle_id": "com.example.daviet"
               }
             }
           ]

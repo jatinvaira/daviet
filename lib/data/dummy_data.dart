@@ -1,7 +1,7 @@
-import 'package:buxx/features/shop/models/brand_model.dart';
-import 'package:buxx/features/shop/models/product_attribute_model.dart';
-import 'package:buxx/features/shop/models/product_variation_model.dart';
-import 'package:buxx/utils/constants/image_strings.dart';
+import 'package:daviet/features/shop/models/brand_model.dart';
+import 'package:daviet/features/shop/models/product_attribute_model.dart';
+import 'package:daviet/features/shop/models/product_variation_model.dart';
+import 'package:daviet/utils/constants/image_strings.dart';
 
 import '../features/shop/models/product_model.dart';
 

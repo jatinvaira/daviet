@@ -1,6 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:buxx/features/shop/controllers/all_products_controller.dart';
-import 'package:buxx/features/shop/models/product_model.dart';
+import 'package:daviet/features/shop/controllers/all_products_controller.dart';
+import 'package:daviet/features/shop/models/product_model.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';

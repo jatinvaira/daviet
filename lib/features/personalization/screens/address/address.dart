@@ -1,8 +1,8 @@
-import 'package:buxx/common/widgets/appbar/appbar.dart';
-import 'package:buxx/features/personalization/screens/address/add_new_address.dart';
-import 'package:buxx/features/personalization/screens/address/widgets/single_address.dart';
-import 'package:buxx/utils/constants/colors.dart';
-import 'package:buxx/utils/constants/sizes.dart';
+import 'package:daviet/common/widgets/appbar/appbar.dart';
+import 'package:daviet/features/personalization/screens/address/add_new_address.dart';
+import 'package:daviet/features/personalization/screens/address/widgets/single_address.dart';
+import 'package:daviet/utils/constants/colors.dart';
+import 'package:daviet/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';

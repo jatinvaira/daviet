@@ -90,12 +90,12 @@ BEGIN
         BLOCK "040904e4"
         BEGIN
             VALUE "CompanyName", "com.example" "\0"
-            VALUE "FileDescription", "buxx" "\0"
+            VALUE "FileDescription", "daviet" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "buxx" "\0"
+            VALUE "InternalName", "daviet" "\0"
             VALUE "LegalCopyright", "Copyright (C) 2024 com.example. All rights reserved." "\0"
-            VALUE "OriginalFilename", "buxx.exe" "\0"
-            VALUE "ProductName", "buxx" "\0"
+            VALUE "OriginalFilename", "daviet.exe" "\0"
+            VALUE "ProductName", "daviet" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END

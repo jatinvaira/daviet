@@ -1,8 +1,8 @@
 import 'dart:math';
 
-import 'package:buxx/data/repositories/categories/category_repository.dart';
-import 'package:buxx/features/shop/models/category_model.dart';
-import 'package:buxx/utils/popups/loaders.dart';
+import 'package:daviet/data/repositories/categories/category_repository.dart';
+import 'package:daviet/features/shop/models/category_model.dart';
+import 'package:daviet/utils/popups/loaders.dart';
 import 'package:get/get.dart';
 
 class CategoryController extends GetxController{

@@ -1,8 +1,8 @@
-import 'package:buxx/features/shop/screens/payments/payments.dart';
-import 'package:buxx/features/shop/screens/product_review/product_reviews.dart';
-import 'package:buxx/features/shop/screens/products/products.dart';
-import 'package:buxx/features/shop/screens/saved/saved.dart';
-import 'package:buxx/routes/routes.dart';
+import 'package:daviet/features/shop/screens/payments/payments.dart';
+import 'package:daviet/features/shop/screens/product_review/product_reviews.dart';
+import 'package:daviet/features/shop/screens/products/products.dart';
+import 'package:daviet/features/shop/screens/saved/saved.dart';
+import 'package:daviet/routes/routes.dart';
 import 'package:get/get_navigation/src/routes/get_route.dart';
 
 import '../features/authentication/screens/login/login.dart';

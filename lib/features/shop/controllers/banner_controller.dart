@@ -1,6 +1,6 @@
 import 'dart:math';
 
-import 'package:buxx/data/repositories/banners/banner_repository.dart';
+import 'package:daviet/data/repositories/banners/banner_repository.dart';
 import 'package:get/get.dart';
 
 import '../../../utils/popups/loaders.dart';

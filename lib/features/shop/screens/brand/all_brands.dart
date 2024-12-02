@@ -1,9 +1,9 @@
-import 'package:buxx/common/widgets/appbar/appbar.dart';
-import 'package:buxx/common/widgets/depts/dept_card.dart';
-import 'package:buxx/common/widgets/layouts/grid_layout.dart';
-import 'package:buxx/common/widgets/texts/section_heading.dart';
-import 'package:buxx/features/shop/screens/brand/brand_products.dart';
-import 'package:buxx/utils/constants/sizes.dart';
+import 'package:daviet/common/widgets/appbar/appbar.dart';
+import 'package:daviet/common/widgets/depts/dept_card.dart';
+import 'package:daviet/common/widgets/layouts/grid_layout.dart';
+import 'package:daviet/common/widgets/texts/section_heading.dart';
+import 'package:daviet/features/shop/screens/brand/brand_products.dart';
+import 'package:daviet/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

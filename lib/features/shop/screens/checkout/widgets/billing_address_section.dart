@@ -1,5 +1,5 @@
-import 'package:buxx/common/widgets/texts/section_heading.dart';
-import 'package:buxx/utils/constants/sizes.dart';
+import 'package:daviet/common/widgets/texts/section_heading.dart';
+import 'package:daviet/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
 
 class TBillingAddressSection extends StatelessWidget {
@@ -56,7 +56,7 @@ class TBillingAddressSection extends StatelessWidget {
             ),
             Expanded(
                 child: Text(
-              'buxx, kabir nagar, jalandhar 144001',
+              'daviet, kabir nagar, jalandhar 144001',
               style: Theme.of(context).textTheme.bodyMedium,
               softWrap: true,
             )),

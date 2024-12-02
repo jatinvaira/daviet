@@ -1,10 +1,10 @@
 import 'dart:async';
 
-import 'package:buxx/common/widgets/success_screen/success_screen.dart';
-import 'package:buxx/data/repositories/authentication/authentication_repository.dart';
-import 'package:buxx/utils/constants/image_strings.dart';
-import 'package:buxx/utils/constants/text_strings.dart';
-import 'package:buxx/utils/popups/loaders.dart';
+import 'package:daviet/common/widgets/success_screen/success_screen.dart';
+import 'package:daviet/data/repositories/authentication/authentication_repository.dart';
+import 'package:daviet/utils/constants/image_strings.dart';
+import 'package:daviet/utils/constants/text_strings.dart';
+import 'package:daviet/utils/popups/loaders.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get/get.dart';
 

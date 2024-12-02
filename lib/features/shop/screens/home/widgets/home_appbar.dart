@@ -1,5 +1,5 @@
-import 'package:buxx/common/widgets/shimmers/shimmer.dart';
-import 'package:buxx/features/personalization/controllers/user_controller.dart';
+import 'package:daviet/common/widgets/shimmers/shimmer.dart';
+import 'package:daviet/features/personalization/controllers/user_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

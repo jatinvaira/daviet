@@ -1,6 +1,6 @@
-import 'package:buxx/features/shop/models/product_model.dart';
-import 'package:buxx/utils/constants/enums.dart';
-import 'package:buxx/utils/popups/loaders.dart';
+import 'package:daviet/features/shop/models/product_model.dart';
+import 'package:daviet/utils/constants/enums.dart';
+import 'package:daviet/utils/popups/loaders.dart';
 import 'package:get/get.dart';
 
 import '../../../../data/repositories/product_repository.dart';
