@@ -1,6 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:daviet/features/shop/controllers/product/images_controller.dart';
-import 'package:daviet/features/shop/models/product_model.dart';
+import 'package:buxx/features/shop/controllers/product/images_controller.dart';
+import 'package:buxx/features/shop/models/product_model.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';

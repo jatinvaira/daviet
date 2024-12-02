@@ -1,8 +1,8 @@
-import 'package:daviet/bindings/general_bindings.dart';
-import 'package:daviet/routes/app_routes.dart';
-import 'package:daviet/utils/constants/colors.dart';
+import 'package:buxx/bindings/general_bindings.dart';
+import 'package:buxx/routes/app_routes.dart';
+import 'package:buxx/utils/constants/colors.dart';
 import 'package:flutter/material.dart';
-import 'package:daviet/utils/theme/theme.dart';
+import 'package:buxx/utils/theme/theme.dart';
 import 'package:get/get.dart';
 
 class App extends StatelessWidget {

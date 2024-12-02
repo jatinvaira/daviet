@@ -1,9 +1,9 @@
-import 'package:daviet/common/widgets/appbar/appbar.dart';
-import 'package:daviet/common/widgets/images/t_rounded_image.dart';
-import 'package:daviet/common/widgets/products/product_cards/product_card_vertical.dart';
-import 'package:daviet/common/widgets/texts/section_heading.dart';
-import 'package:daviet/utils/constants/image_strings.dart';
-import 'package:daviet/utils/constants/sizes.dart';
+import 'package:buxx/common/widgets/appbar/appbar.dart';
+import 'package:buxx/common/widgets/images/t_rounded_image.dart';
+import 'package:buxx/common/widgets/products/product_cards/product_card_vertical.dart';
+import 'package:buxx/common/widgets/texts/section_heading.dart';
+import 'package:buxx/utils/constants/image_strings.dart';
+import 'package:buxx/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
 
 import '../../models/product_model.dart';
@@ -16,7 +16,7 @@ class SubCategoriesScreen extends StatelessWidget {
     return Scaffold(
       appBar: const TAppBar(
         showBackArrow: true,
-        title: Text('Clubs of Daviet'),
+        title: Text('Clubs of buxx'),
       ),
       body: SingleChildScrollView(
         child: Padding(

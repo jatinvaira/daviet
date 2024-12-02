@@ -1,6 +1,6 @@
-import 'package:daviet/features/shop/models/product_model.dart';
-import 'package:daviet/utils/constants/enums.dart';
-import 'package:daviet/utils/popups/loaders.dart';
+import 'package:buxx/features/shop/models/product_model.dart';
+import 'package:buxx/utils/constants/enums.dart';
+import 'package:buxx/utils/popups/loaders.dart';
 import 'package:get/get.dart';
 
 import '../../../../data/repositories/product_repository.dart';
@@ -32,6 +32,17 @@ class ProductController extends GetxController {
     }
   }
 
+  Future<List<ProductModel>> fetchAllFeaturedProducts() async {
+    try {
+      //fetch
+      final products = await productRepository.getFeaturedProducts();
+      return products;
+      // assign
+    } catch (e) {
+      TLoaders.errorSnackBar(title: 'Oh Snap!', message: e.toString());
+      return [];
+    }
+  }
 
   /// Get Product Price
   String getProductPrice(ProductModel product) {

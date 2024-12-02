@@ -1,10 +1,10 @@
-import 'package:daviet/features/shop/screens/cart/widgets/cart_items.dart';
-import 'package:daviet/features/shop/screens/checkout/checkout.dart';
-import 'package:daviet/utils/constants/colors.dart';
-import 'package:daviet/utils/helpers/helper_functions.dart';
+import 'package:buxx/features/shop/screens/cart/widgets/cart_items.dart';
+import 'package:buxx/features/shop/screens/checkout/checkout.dart';
+import 'package:buxx/utils/constants/colors.dart';
+import 'package:buxx/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
-import 'package:daviet/common/widgets/appbar/appbar.dart';
-import 'package:daviet/utils/constants/sizes.dart';
+import 'package:buxx/common/widgets/appbar/appbar.dart';
+import 'package:buxx/utils/constants/sizes.dart';
 import 'package:get/get.dart';
 
 

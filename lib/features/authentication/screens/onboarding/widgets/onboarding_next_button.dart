@@ -1,4 +1,4 @@
-import 'package:daviet/features/authentication/controllers/onboarding/onboarding_controller.dart';
+import 'package:buxx/features/authentication/controllers/onboarding/onboarding_controller.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../utils/constants/colors.dart';

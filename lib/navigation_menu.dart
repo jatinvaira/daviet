@@ -1,9 +1,9 @@
-import 'package:daviet/features/personalization/screens/settings/settings.dart';
-import 'package:daviet/features/shop/screens/home/home.dart';
-import 'package:daviet/features/shop/screens/products/products.dart';
-import 'package:daviet/features/shop/screens/saved/saved.dart';
-import 'package:daviet/utils/constants/colors.dart';
-import 'package:daviet/utils/helpers/helper_functions.dart';
+import 'package:buxx/features/personalization/screens/settings/settings.dart';
+import 'package:buxx/features/shop/screens/home/home.dart';
+import 'package:buxx/features/shop/screens/products/products.dart';
+import 'package:buxx/features/shop/screens/saved/saved.dart';
+import 'package:buxx/utils/constants/colors.dart';
+import 'package:buxx/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';

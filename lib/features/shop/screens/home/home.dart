@@ -1,11 +1,11 @@
-
-import 'package:daviet/common/widgets/shimmers/vertical_product_shimmer.dart';
-import 'package:daviet/features/shop/screens/all_posts/all_posts.dart';
-import 'package:daviet/features/shop/screens/home/widgets/home_appbar.dart';
-import 'package:daviet/features/shop/screens/home/widgets/home_categories.dart';
-import 'package:daviet/features/shop/screens/home/widgets/promo_slider.dart';
-import 'package:daviet/utils/constants/colors.dart';
-import 'package:daviet/utils/constants/sizes.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:buxx/common/widgets/shimmers/vertical_product_shimmer.dart';
+import 'package:buxx/features/shop/screens/all_products/all_products.dart';
+import 'package:buxx/features/shop/screens/home/widgets/home_appbar.dart';
+import 'package:buxx/features/shop/screens/home/widgets/home_categories.dart';
+import 'package:buxx/features/shop/screens/home/widgets/promo_slider.dart';
+import 'package:buxx/utils/constants/colors.dart';
+import 'package:buxx/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../../../common/widgets/custom_shapes/containers/primary_header_container.dart';
@@ -48,9 +48,9 @@ class HomeScreen extends StatelessWidget {
                     child: Column(
                       children: [
                         TSectionHeading(
-                          title: "Popular Posts",
+                          title: "Popular Products",
                           showActionButton: true,
-                          onPressed: () => Get.to(() => const AllPosts()),
+                          onPressed: () => Get.to(() => const AllProducts(title: 'Popular Products',)),
                           textColor: Colors.white,
                         ),
                         const SizedBox(
@@ -79,9 +79,12 @@ class HomeScreen extends StatelessWidget {
                     height: TSizes.spaceBtwSections,
                   ),
                   TSectionHeading(
-                    title: 'Popular Posts',
+                    title: 'Popular Products',
                     showActionButton: true,
-                    onPressed: () => Get.to(() => const AllPosts()),
+                    onPressed: () => Get.to(() => AllProducts(
+                          title: 'Popular Products',
+                          futureMethod: controller.fetchAllFeaturedProducts(),
+                        )),
                   ),
                   const SizedBox(
                     height: TSizes.spaceBtwSections,
@@ -98,7 +101,8 @@ class HomeScreen extends StatelessWidget {
                     }
                     return TGridLayout(
                       itemCount: controller.featuredProducts.length,
-                      itemBuilder: (_, index) =>  TProductCardVertical(product: controller.featuredProducts[index]),
+                      itemBuilder: (_, index) => TProductCardVertical(
+                          product: controller.featuredProducts[index]),
                     );
                   }),
                 ],

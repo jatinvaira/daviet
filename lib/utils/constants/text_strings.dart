@@ -7,7 +7,7 @@ class TTexts {
   static const String skip = "Skip";
   static const String done = "Done";
   static const String submit = "Submit";
-  static const String appName = "DAVIET";
+  static const String appName = "buxx";
   static const String tContinue = "Continue";
 
 
@@ -16,7 +16,7 @@ class TTexts {
   static const String onBoardingTitle2 = "Major Needs in your device";
   static const String onBoardingTitle3 = "Seamless Interface";
 
-  static const String onBoardingSubTitle1 = "Welcome to DAVIET Companion";
+  static const String onBoardingSubTitle1 = "Welcome to buxx Companion";
   static const String onBoardingSubTitle2 = "Give Feedback - Your Convenience, Our Priority!";
   static const String onBoardingSubTitle3 = "From Payments to event notifications";
 
@@ -44,7 +44,7 @@ class TTexts {
 
 
   // -- Authentication Headings
-  static const String loginTitle = "Welcome to DAVIET Companion";
+  static const String loginTitle = "Welcome to buxx Companion";
   static const String loginSubTitle = "Discover Limitless Choices and Unmatched Convenience.";
   static const String signupTitle = "Let’s create your account";
   static const String forgetPasswordTitle = "Forget password";
@@ -62,7 +62,7 @@ class TTexts {
   static const String popularProducts = "Popular Products";
 
   // -- Home
-  static const String homeAppbarTitle = "Welcome to DAVIET companion";
+  static const String homeAppbarTitle = "Welcome to buxx companion";
   static const String homeAppbarSubTitle = "Jatin Vaira";
 
 

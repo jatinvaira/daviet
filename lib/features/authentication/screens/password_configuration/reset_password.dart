@@ -1,8 +1,8 @@
-import 'package:daviet/features/authentication/controllers/forget_password/forget_password_controller.dart';
-import 'package:daviet/features/authentication/screens/login/login.dart';
-import 'package:daviet/utils/constants/image_strings.dart';
-import 'package:daviet/utils/constants/sizes.dart';
-import 'package:daviet/utils/constants/text_strings.dart';
+import 'package:buxx/features/authentication/controllers/forget_password/forget_password_controller.dart';
+import 'package:buxx/features/authentication/screens/login/login.dart';
+import 'package:buxx/utils/constants/image_strings.dart';
+import 'package:buxx/utils/constants/sizes.dart';
+import 'package:buxx/utils/constants/text_strings.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';

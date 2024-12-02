@@ -1,9 +1,9 @@
-import 'package:daviet/common/widgets/custom_shapes/containers/rounded_container.dart';
-import 'package:daviet/common/widgets/texts/section_heading.dart';
-import 'package:daviet/utils/constants/colors.dart';
-import 'package:daviet/utils/constants/image_strings.dart';
-import 'package:daviet/utils/constants/sizes.dart';
-import 'package:daviet/utils/helpers/helper_functions.dart';
+import 'package:buxx/common/widgets/custom_shapes/containers/rounded_container.dart';
+import 'package:buxx/common/widgets/texts/section_heading.dart';
+import 'package:buxx/utils/constants/colors.dart';
+import 'package:buxx/utils/constants/image_strings.dart';
+import 'package:buxx/utils/constants/sizes.dart';
+import 'package:buxx/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
 
 class TBillingPaymentSection extends StatelessWidget {

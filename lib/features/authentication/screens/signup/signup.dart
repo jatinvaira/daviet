@@ -1,9 +1,9 @@
-import 'package:daviet/common/widgets/login_signup/form_divider.dart';
-import 'package:daviet/common/widgets/login_signup/social_buttons.dart';
-import 'package:daviet/features/authentication/screens/signup/widgets/signup_form.dart';
-import 'package:daviet/utils/constants/sizes.dart';
-import 'package:daviet/utils/constants/text_strings.dart';
-import 'package:daviet/utils/helpers/helper_functions.dart';
+import 'package:buxx/common/widgets/login_signup/form_divider.dart';
+import 'package:buxx/common/widgets/login_signup/social_buttons.dart';
+import 'package:buxx/features/authentication/screens/signup/widgets/signup_form.dart';
+import 'package:buxx/utils/constants/sizes.dart';
+import 'package:buxx/utils/constants/text_strings.dart';
+import 'package:buxx/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

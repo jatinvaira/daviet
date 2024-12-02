@@ -1,5 +1,5 @@
-import 'package:daviet/common/widgets/shimmers/shimmer.dart';
-import 'package:daviet/utils/constants/sizes.dart';
+import 'package:buxx/common/widgets/shimmers/shimmer.dart';
+import 'package:buxx/utils/constants/sizes.dart';
 import 'package:flutter/cupertino.dart';
 
 class TCategoryShimmer extends StatelessWidget {

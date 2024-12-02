@@ -1,4 +1,4 @@
-import 'package:daviet/utils/device/device_utility.dart';
+import 'package:buxx/utils/device/device_utility.dart';
 import 'package:flutter/material.dart';
 
 import '../../../utils/constants/colors.dart';

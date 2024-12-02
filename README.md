@@ -1,3 +1,3 @@
-# daviet
+# buxx
 
-Minor Project DAVIET COMPANION
+Minor Project buxx COMPANION

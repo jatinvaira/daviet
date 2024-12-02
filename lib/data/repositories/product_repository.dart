@@ -36,52 +36,39 @@ class ProductRepository extends GetxController {
     }
   }
 
-  // Future<void> uploadDummyData(List<ProductModel> products) async {
-  //   try {
-  //     // Get an instance of the Firebase Storage service
-  //     final storage = Get.put(TFirebaseStorageService());
-  //
-  //     // Loop through each product
-  //     for (var product in products) {
-  //       // Upload and update the thumbnail image
-  //       final thumbnail =
-  //       await storage.getImageDataFromAssets(product.thumbnail);
-  //       product.thumbnail = await storage.uploadImageData(
-  //           'Products/Images', thumbnail, product.thumbnail.toString());
-  //
-  //       // Upload and update additional product images
-  //       if (product.images != null && product.images!.isNotEmpty) {
-  //         product.images = await Future.wait(product.images!.map((image) async {
-  //           final assetImage = await storage.getImageDataFromAssets(image);
-  //           return await storage.uploadImageData(
-  //               'Products/Images', assetImage, image);
-  //         }).toList());
-  //       }
-  //
-  //       // Upload and update variation images for variable products
-  //       if (product.productType == ProductType.variable.toString() &&
-  //           product.productVariations != null) {
-  //         for (var variation in product.productVariations!) {
-  //           final assetImage =
-  //           await storage.getImageDataFromAssets(variation.image);
-  //           variation.image = await storage.uploadImageData(
-  //               'Products/Images', assetImage, variation.image);
-  //         }
-  //       }
-  //
-  //       // Store the updated product in Firestore
-  //       await _db.collection("Products").doc(product.id).set(product.toJson());
-  //     }
-  //   } on FirebaseException catch (e) {
-  //     throw TFirebaseException(e.code).message;
-  //   } on SocketException catch (e) {
-  //     throw 'Network error: ${e.message}';
-  //   } on PlatformException catch (e) {
-  //     throw TPlatformException(e.code).message;
-  //   } catch (e) {
-  //     throw 'An unexpected error occurred: $e';
-  //   }
-  // }
+  Future<List<ProductModel>> getAllFeaturedProducts() async {
+    try {
+      final snapshot = await _db
+          .collection('Products')
+          .where('IsFeatured', isEqualTo: true)
+          .get();
+
+      return snapshot.docs.map((e) => ProductModel.fromSnapshot(e)).toList();
+    } on FirebaseException catch (e) {
+      throw TFirebaseException(e.code).message;
+    } on PlatformException catch (e) {
+      throw TPlatformException(e.code).message;
+    } catch (e) {
+      throw 'Something went wrong. Please try again';
+    }
+  }
+
+
+  Future<List<ProductModel>> fetchProductsByQuery(Query query) async {
+    try {
+      final querySnapshot = await query.get();
+      final List<ProductModel> productList = querySnapshot.docs
+          .map((doc) => ProductModel.fromQuerySnapshot(doc))
+          .toList();
+      return productList;
+    } on FirebaseException catch (e) {
+      throw TFirebaseException(e.code).message;
+    } on PlatformException catch (e) {
+      throw TPlatformException(e.code).message;
+    } catch (e) {
+      throw 'Something went wrong. Please try again';
+    }
+  }
 
   Future<void> uploadDummyData(List<ProductModel> products) async {
     try {

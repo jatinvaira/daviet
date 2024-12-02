@@ -1,4 +1,4 @@
-import 'package:daviet/common/styles/spacing_styles.dart';
+import 'package:buxx/common/styles/spacing_styles.dart';
 import 'package:flutter/material.dart';
 
 import '../../../utils/constants/colors.dart';

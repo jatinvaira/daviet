@@ -1,17 +1,17 @@
-import 'package:daviet/common/widgets/texts/section_heading.dart';
-import 'package:daviet/features/shop/models/product_model.dart';
-import 'package:daviet/features/shop/screens/product_details/widgets/bottom_add_to_cart_widget.dart';
-import 'package:daviet/features/shop/screens/product_details/widgets/product_attributes.dart';
-import 'package:daviet/features/shop/screens/product_details/widgets/product_detail_image_slider.dart';
-import 'package:daviet/features/shop/screens/product_details/widgets/product_meta_data.dart';
-import 'package:daviet/features/shop/screens/product_details/widgets/rating_share_widget.dart';
-import 'package:daviet/features/shop/screens/product_review/product_reviews.dart';
+import 'package:buxx/common/widgets/texts/section_heading.dart';
+import 'package:buxx/features/shop/models/product_model.dart';
+import 'package:buxx/features/shop/screens/product_details/widgets/bottom_add_to_cart_widget.dart';
+import 'package:buxx/features/shop/screens/product_details/widgets/product_attributes.dart';
+import 'package:buxx/features/shop/screens/product_details/widgets/product_detail_image_slider.dart';
+import 'package:buxx/features/shop/screens/product_details/widgets/product_meta_data.dart';
+import 'package:buxx/features/shop/screens/product_details/widgets/rating_share_widget.dart';
+import 'package:buxx/features/shop/screens/product_review/product_reviews.dart';
 
-import 'package:daviet/utils/constants/colors.dart';
-import 'package:daviet/utils/constants/enums.dart';
+import 'package:buxx/utils/constants/colors.dart';
+import 'package:buxx/utils/constants/enums.dart';
 
-import 'package:daviet/utils/constants/sizes.dart';
-import 'package:daviet/utils/helpers/helper_functions.dart';
+import 'package:buxx/utils/constants/sizes.dart';
+import 'package:buxx/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';

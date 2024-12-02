@@ -1,10 +1,10 @@
-import 'package:daviet/common/widgets/images/t_circular_image.dart';
-import 'package:daviet/common/widgets/texts/product_p_text.dart';
-import 'package:daviet/common/widgets/texts/product_title_text.dart';
-import 'package:daviet/common/widgets/texts/t_brand_title_with_verified_icon.dart';
-import 'package:daviet/features/shop/controllers/product/product_controller.dart';
-import 'package:daviet/utils/constants/enums.dart';
-import 'package:daviet/utils/constants/image_strings.dart';
+import 'package:buxx/common/widgets/images/t_circular_image.dart';
+import 'package:buxx/common/widgets/texts/product_p_text.dart';
+import 'package:buxx/common/widgets/texts/product_title_text.dart';
+import 'package:buxx/common/widgets/texts/t_brand_title_with_verified_icon.dart';
+import 'package:buxx/features/shop/controllers/product/product_controller.dart';
+import 'package:buxx/utils/constants/enums.dart';
+import 'package:buxx/utils/constants/image_strings.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../common/widgets/custom_shapes/containers/rounded_container.dart';

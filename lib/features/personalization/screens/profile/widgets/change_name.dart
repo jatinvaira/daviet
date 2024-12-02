@@ -1,7 +1,7 @@
-import 'package:daviet/common/widgets/appbar/appbar.dart';
-import 'package:daviet/utils/constants/sizes.dart';
-import 'package:daviet/utils/constants/text_strings.dart';
-import 'package:daviet/utils/validators/validation.dart';
+import 'package:buxx/common/widgets/appbar/appbar.dart';
+import 'package:buxx/utils/constants/sizes.dart';
+import 'package:buxx/utils/constants/text_strings.dart';
+import 'package:buxx/utils/validators/validation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';

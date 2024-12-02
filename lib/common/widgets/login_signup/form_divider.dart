@@ -1,4 +1,4 @@
-import 'package:daviet/utils/helpers/helper_functions.dart';
+import 'package:buxx/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
 
 import '../../../utils/constants/colors.dart';

@@ -1,9 +1,9 @@
-import 'package:daviet/data/repositories/authentication/authentication_repository.dart';
-import 'package:daviet/features/personalization/controllers/user_controller.dart';
-import 'package:daviet/utils/constants/image_strings.dart';
-import 'package:daviet/utils/helpers/network_manager.dart';
-import 'package:daviet/utils/popups/full_screen_loader.dart';
-import 'package:daviet/utils/popups/loaders.dart';
+import 'package:buxx/data/repositories/authentication/authentication_repository.dart';
+import 'package:buxx/features/personalization/controllers/user_controller.dart';
+import 'package:buxx/utils/constants/image_strings.dart';
+import 'package:buxx/utils/helpers/network_manager.dart';
+import 'package:buxx/utils/popups/full_screen_loader.dart';
+import 'package:buxx/utils/popups/loaders.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';

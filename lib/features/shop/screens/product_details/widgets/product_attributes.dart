@@ -1,13 +1,13 @@
-import 'package:daviet/common/widgets/chips/choice_chip.dart';
-import 'package:daviet/common/widgets/custom_shapes/containers/rounded_container.dart';
-import 'package:daviet/common/widgets/texts/product_p_text.dart';
-import 'package:daviet/common/widgets/texts/product_title_text.dart';
-import 'package:daviet/common/widgets/texts/section_heading.dart';
-import 'package:daviet/features/shop/controllers/product/variation_controller.dart';
-import 'package:daviet/features/shop/models/product_model.dart';
-import 'package:daviet/utils/constants/colors.dart';
-import 'package:daviet/utils/constants/sizes.dart';
-import 'package:daviet/utils/helpers/helper_functions.dart';
+import 'package:buxx/common/widgets/chips/choice_chip.dart';
+import 'package:buxx/common/widgets/custom_shapes/containers/rounded_container.dart';
+import 'package:buxx/common/widgets/texts/product_p_text.dart';
+import 'package:buxx/common/widgets/texts/product_title_text.dart';
+import 'package:buxx/common/widgets/texts/section_heading.dart';
+import 'package:buxx/features/shop/controllers/product/variation_controller.dart';
+import 'package:buxx/features/shop/models/product_model.dart';
+import 'package:buxx/utils/constants/colors.dart';
+import 'package:buxx/utils/constants/sizes.dart';
+import 'package:buxx/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
@@ -22,140 +22,155 @@ class TProductsAttributes extends StatelessWidget {
     final controller = Get.put(VariationController());
     final dark = THelperFunctions.isDarkMode(context);
 
-    return Column(
-      children: [
-        /// Selected attribute pricing and desc
-        // display variation and price and stock when var is selected
-        if (controller.selectedVariation.value.id.isNotEmpty)
-          Obx(
-            () => TRoundedContainer(
+    return Obx(
+      () => Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          // Selected Variation Details
+          if (controller.selectedVariation.value.id.isNotEmpty)
+            TRoundedContainer(
               padding: const EdgeInsets.all(TSizes.md),
               backgroundColor: dark ? TColors.darkerGrey : TColors.grey,
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  /// Title, Price and Stock status
+                  // Title and Pricing Section
+
                   Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       const TSectionHeading(
-                        title: 'Variation',
+                        title: 'Selected Variation',
                         showActionButton: false,
                       ),
-                      const SizedBox(
-                        width: TSizes.spaceBtwItems,
-                      ),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Row(
-                            children: [
-                              const TProductTitleText(
-                                title: 'Price :  ',
-                                smallSize: true,
-                              ),
-                              // const SizedBox(
-                              //   width: TSizes.spaceBtwItems,
-                              // ),
-                              if (controller.selectedVariation.value.salePrice >
-                                  0)
-                                Text(
+                      if (controller.variationStockStatus.value == 'In Stock')
+                        // Pricing Display
+                        Row(
+                          children: [
+                            if (controller.selectedVariation.value.salePrice >
+                                0)
+                              Padding(
+                                padding: const EdgeInsets.only(right: 8.0),
+                                child: Text(
                                   '\$${controller.selectedVariation.value.price}',
                                   style: Theme.of(context)
                                       .textTheme
-                                      .labelSmall!
+                                      .bodyMedium!
                                       .apply(
                                         decoration: TextDecoration.lineThrough,
                                         color: Colors.red,
                                       ),
                                 ),
-                              const SizedBox(
-                                width: TSizes.spaceBtwItems / 3,
                               ),
-                              TProductPText(
-                                  price: controller.getVariationPrice(),
-                                  isLarge: false),
-                            ],
-                          ),
-                          const SizedBox(height: TSizes.spaceBtwItems / 5),
-                          Row(
-                            children: [
-                              const TProductTitleText(
-                                title: 'Stock : ',
-                                smallSize: true,
-                              ),
-                              const SizedBox(
-                                width: TSizes.spaceBtwItems,
-                              ),
-                              Text(
-                                controller.variationStockStatus.value,
-                                style: Theme.of(context).textTheme.titleMedium,
-                              )
-                            ],
-                          )
-                        ],
-                      ),
+                            TProductPText(
+                              price: controller.getVariationPrice(),
+                              isLarge: true, // Highlight the main price
+                            ),
+                          ],
+                        ),
+                      if (controller.variationStockStatus.value ==
+                          'Out of Stock')
+                        Row(
+                          children: [
+                            const TProductTitleText(
+                              title: 'Stock : ',
+                              smallSize: true,
+                            ),
+                            Text(
+                              controller.variationStockStatus.value,
+                              style: Theme.of(context).textTheme.bodyMedium,
+                            ),
+                          ],
+                        ),
                     ],
                   ),
-
-                  // variation desc
-
-                    const TProductTitleText(
-                      title:
-                          'vv',
-                      smallSize: true,
-                      maxLines: 4,
-                    ),
+                  const SizedBox(height: TSizes.spaceBtwItems / 6),
+                  // Stock Status
+                  // Row(
+                  //   children: [
+                  //     const TProductTitleText(
+                  //       title: 'Stock Status: ',
+                  //       smallSize: true,
+                  //     ),
+                  //     Chip(
+                  //       label: Text(controller.variationStockStatus.value),
+                  //       backgroundColor: controller.variationStockStatus.value.toLowerCase() == 'in stock'
+                  //           ? Colors.green[100]
+                  //           : Colors.red[100],
+                  //       labelStyle: TextStyle(
+                  //         color: controller.variationStockStatus.value.toLowerCase() == 'in stock'
+                  //             ? Colors.green[800]
+                  //             : Colors.red[800],
+                  //       ),
+                  //     ),
+                  //   ],
+                  // ),
+                  const Divider(
+                    height: 20,
+                    thickness: 1,
+                    color: Colors.grey,
+                  ),
+                  // Variation Description
+                  TProductTitleText(
+                    title: product.description ?? '',
+                    smallSize: true,
+                    maxLines: 4,
+                    textAlign: TextAlign.left,
+                  ),
                 ],
               ),
             ),
-          ),
-        const SizedBox(
-          height: TSizes.spaceBtwItems,
-        ),
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: product.productAttributes!
-              .map(
-                (attribute) => Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    TSectionHeading(
-                        title: attribute.name ?? '', showActionButton: false),
-                    const SizedBox(height: TSizes.spaceBtwItems / 2),
-                    Obx(() {
-                      return Wrap(
-                          spacing: 8,
-                          children: attribute.values!.map(
-                            (attributeValue) {
-                              final isSelected = controller
-                                      .selectedAttributes[attribute.name] ==
-                                  attributeValue;
-                              final available = controller
-                                  .getAttributeAvailabilityInVariation(
-                                      product.productVariations!,
-                                      attribute.name!)
-                                  .contains(attributeValue);
-                              return TChoiceChip(
-                                  text: attributeValue,
-                                  selected: isSelected,
-                                  onSelected: available
-                                      ? (selected) {
-                                          if (selected && available) {
-                                            controller.onAttributeSelected(
-                                                product,
-                                                attribute.name ?? '',
-                                                attributeValue);
-                                          }
-                                        }
-                                      : null);
-                            },
-                          ).toList());
-                    })
-                  ],
+
+          const SizedBox(height: TSizes.spaceBtwItems),
+
+          // Product Attributes Section
+          ...product.productAttributes!.map((attribute) {
+            return Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                TSectionHeading(
+                  title: attribute.name ?? '',
+                  showActionButton: false,
                 ),
-              )
-              .toList(),
-        ),
-      ],
+                const SizedBox(height: TSizes.spaceBtwItems / 2),
+                Obx(() {
+                  return Wrap(
+                    spacing: 8,
+                    runSpacing: 8,
+                    children: attribute.values!.map((attributeValue) {
+                      final isSelected =
+                          controller.selectedAttributes[attribute.name] ==
+                              attributeValue;
+                      final available = controller
+                          .getAttributeAvailabilityInVariation(
+                            product.productVariations!,
+                            attribute.name!,
+                          )
+                          .contains(attributeValue);
+                      return TChoiceChip(
+                        text: attributeValue,
+                        selected: isSelected,
+                        onSelected: available
+                            ? (selected) {
+                                if (selected) {
+                                  controller.onAttributeSelected(
+                                    product,
+                                    attribute.name ?? '',
+                                    attributeValue,
+                                  );
+                                }
+                              }
+                            : null,
+                      );
+                    }).toList(),
+                  );
+                }),
+                const SizedBox(height: TSizes.spaceBtwItems),
+              ],
+            );
+          }).toList(),
+        ],
+      ),
     );
   }
 }

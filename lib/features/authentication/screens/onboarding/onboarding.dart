@@ -1,11 +1,11 @@
-import 'package:daviet/features/authentication/controllers/onboarding/onboarding_controller.dart';
-import 'package:daviet/features/authentication/screens/onboarding/widgets/onboarding_next_button.dart';
-import 'package:daviet/utils/constants/image_strings.dart';
-import 'package:daviet/utils/constants/text_strings.dart';
+import 'package:buxx/features/authentication/controllers/onboarding/onboarding_controller.dart';
+import 'package:buxx/features/authentication/screens/onboarding/widgets/onboarding_next_button.dart';
+import 'package:buxx/utils/constants/image_strings.dart';
+import 'package:buxx/utils/constants/text_strings.dart';
 import 'package:flutter/material.dart';
-import 'package:daviet/features/authentication/screens/onboarding/widgets/onboarding_page.dart';
-import 'package:daviet/features/authentication/screens/onboarding/widgets/onboarding_skip.dart';
-import 'package:daviet/features/authentication/screens/onboarding/widgets/onboarding_dot_navigation.dart';
+import 'package:buxx/features/authentication/screens/onboarding/widgets/onboarding_page.dart';
+import 'package:buxx/features/authentication/screens/onboarding/widgets/onboarding_skip.dart';
+import 'package:buxx/features/authentication/screens/onboarding/widgets/onboarding_dot_navigation.dart';
 import 'package:get/get.dart';
 
 import '../../../../utils/constants/colors.dart';

@@ -1,10 +1,10 @@
-import 'package:daviet/data/repositories/authentication/authentication_repository.dart';
-import 'package:daviet/data/repositories/user/user_repository.dart';
-import 'package:daviet/features/authentication/modals/user_model.dart';
-import 'package:daviet/features/authentication/screens/signup/verify_email.dart';
-import 'package:daviet/utils/constants/image_strings.dart';
-import 'package:daviet/utils/popups/full_screen_loader.dart';
-import 'package:daviet/utils/popups/loaders.dart';
+import 'package:buxx/data/repositories/authentication/authentication_repository.dart';
+import 'package:buxx/data/repositories/user/user_repository.dart';
+import 'package:buxx/features/authentication/modals/user_model.dart';
+import 'package:buxx/features/authentication/screens/signup/verify_email.dart';
+import 'package:buxx/utils/constants/image_strings.dart';
+import 'package:buxx/utils/popups/full_screen_loader.dart';
+import 'package:buxx/utils/popups/loaders.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 

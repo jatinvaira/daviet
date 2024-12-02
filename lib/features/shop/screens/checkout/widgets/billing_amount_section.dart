@@ -1,4 +1,4 @@
-import 'package:daviet/utils/constants/sizes.dart';
+import 'package:buxx/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
 
 class TBillingAmountSection extends StatelessWidget {

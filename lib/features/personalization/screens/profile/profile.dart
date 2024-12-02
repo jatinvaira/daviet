@@ -1,10 +1,10 @@
-import 'package:daviet/common/widgets/appbar/appbar.dart';
-import 'package:daviet/common/widgets/images/t_circular_image.dart';
-import 'package:daviet/common/widgets/shimmers/shimmer.dart';
-import 'package:daviet/common/widgets/texts/section_heading.dart';
-import 'package:daviet/features/personalization/screens/profile/widgets/profile_menu.dart';
-import 'package:daviet/utils/constants/image_strings.dart';
-import 'package:daviet/utils/constants/sizes.dart';
+import 'package:buxx/common/widgets/appbar/appbar.dart';
+import 'package:buxx/common/widgets/images/t_circular_image.dart';
+import 'package:buxx/common/widgets/shimmers/shimmer.dart';
+import 'package:buxx/common/widgets/texts/section_heading.dart';
+import 'package:buxx/features/personalization/screens/profile/widgets/profile_menu.dart';
+import 'package:buxx/utils/constants/image_strings.dart';
+import 'package:buxx/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
